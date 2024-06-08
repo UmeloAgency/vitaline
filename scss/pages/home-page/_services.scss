@@ -1,0 +1,148 @@
+.services {
+  &.section {
+    background-color: $semi-dark-color;
+  }
+
+  &__title {
+    color: $light-color;
+    margin-bottom: 25px;
+
+    @include _1024 {
+      margin-bottom: 45px;
+    }
+  }
+  &__wrapp {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-bottom: -8px;
+
+    @include _1024 {
+      margin-right: -16px;
+      margin-bottom: -16px;
+      width: 100%;
+    }
+  }
+
+  &__card {
+    @include retinacontainer-width(306px);
+    margin-bottom: 8px;
+    margin-right: 8px;
+
+    @include _1024 {
+      @include retinacontainer-width(calc((100% - 32px) / 2));
+      margin-right: 16px;
+      margin-bottom: 16px;
+
+      &:hover .services__iconbtn {
+        @include visible(flex);
+      }
+    }
+
+    &_inner {
+      @include retinacontainer-height(67%);
+    }
+    &_content {
+      @include retinacontainer-content;
+      padding-top: 133px;
+      padding-left: 17px;
+      padding-right: 17px;
+      padding-bottom: 7px;
+      border-radius: 8px 25px 8px 8px;
+      background-color: $light-color;
+
+      @include _1024 {
+        padding-left: 40px;
+        padding-right: 50px;
+        padding-bottom: 26px;
+        padding-top: 44%;
+      }
+    }
+  }
+
+  &__imageblock {
+    border-radius: 8px 25px 8px 8px;
+    width: 100%;
+    height: 145px;
+    overflow: hidden;
+
+    @include pos(absolute, 0, 0, 0);
+    z-index: -1;
+
+    @include _1024 {
+      height: 75%;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      @include pos(absolute, auto, 0, 0, 0);
+      height: 47px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #fff 85.95%
+      );
+
+      @include _1024 {
+        height: 56%;
+      }
+    }
+  }
+
+  &__image {
+    height: 99%;
+    object-fit: cover;
+  }
+
+  &__name {
+    @include font(15px, 600, $dark-color, 112%);
+    margin-bottom: 9px;
+    text-transform: uppercase;
+
+    @include _1024 {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+  }
+  &__text {
+    height: 37px;
+    @include font(12px, 400, $dark-color, 112%);
+    overflow: hidden;
+    @include _1024 {
+      font-size: 14px;
+      height: 48px;
+    }
+  }
+
+  &__iconbtn {
+    @include visible(flex);
+    width: 39px;
+    height: 39px;
+    border-radius: 100%;
+    background-color: $dark-color;
+    @include flex();
+    @include pos(absolute, 9px, 9px);
+    z-index: 2;
+
+    @include _1024 {
+      top: 17px;
+      right: 21px;
+      width: 55px;
+      height: 55px;
+
+      @include hidden();
+    }
+  }
+  &__icon {
+    height: 19px;
+    width: 19px;
+    stroke: none;
+    fill: $light-color;
+
+    @include _1024 {
+      height: 27px;
+      width: 27px;
+    }
+  }
+}

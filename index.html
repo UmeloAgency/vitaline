@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Raleway:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style/css/style.min.css" />
+  </head>
+  <body>
+    <header class="header section">
+      <div class="container">
+        <a href="/index.html" class="logo__link">
+          <svg class="logo__icon">
+            <use href="/symbol-defs.svg#icon-logo"></use>
+          </svg>
+        </a>
+
+        <div class="address__wrapper">
+          <svg class="address__icon">
+            <use href="/symbol-defs.svg#icon-marker-pin"></use>
+          </svg>
+          <p class="address__text">
+            м. Київ, ЖК "Крістер Град", <br />
+            вул. Сергія Данченка 5, корпус 5
+          </p>
+        </div>
+
+        <div class="schedule__wrapper">
+          <svg class="schedule__icon">
+            <use href="/symbol-defs.svg#icon-clock-check"></use>
+          </svg>
+          <p class="schedule__text">
+            Вт, Ср, Пт: 10.00 - 19.00. <br />
+
+            Сб, Нд: 10.00 - 16.00. Пн, Чт: вихідний
+          </p>
+        </div>
+
+        <div class="tel__wrapper">
+          <img
+            src="/dev_copmonent/Rectangleuser.png"
+            alt="manager"
+            srcset=""
+            class="tel__manager"
+          />
+          <a href="tel:+380931097091" class="tel__link">+ 38 093 109 70 91</a>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="container">
+          <nav class="nav__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="" class="nav__link">Про клініку</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link multi-link"
+                  >Послуги
+
+                  <svg class="nav__icon">
+                    <use href="/symbol-defs.svg#icon-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="nav__sublist"></ul>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Цiна</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Вiдгуки</a>
+              </li>
+
+              <li class="nav__item accent">
+                <a href="" class="nav__link accent">Акції</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="" class="nav__link">Лiкарі</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="" class="nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <svg class="nav__close">
+            <use href="/symbol-defs.svg#icon-close"></use>
+          </svg>
+
+          <div class="button__wrapper">
+            <div class="language__wrapper">
+              <div class="language__button">
+                <input type="radio" id="UA" name="lang" value="UA" checked />
+                <label for="UA">UA</label>
+              </div>
+
+              <span class="language__slash">/</span>
+              <div class="language__button">
+                <input type="radio" id="RU" name="lang" value="RU" />
+                <label for="RU">RU</label>
+              </div>
+            </div>
+
+            <a href="" class="button__search button-icon">
+              <svg>
+                <use href="/symbol-defs.svg#icon-search"></use>
+              </svg>
+            </a>
+            <a href="" class="feedback__insta button-icon">
+              <svg>
+                <use href="/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+
+            <button type="button" class="button-text button__online">
+              онлайн запис
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="banner section">
+      <div class="container">
+        <div class="banner__wrapper">
+          <div class="feedback__wrapper">
+            <p class="feedback__text">Напиши нам в меседжер</p>
+
+            <a href="/" class="feedback__viber">
+              <svg>
+                <use href="/symbol-defs.svg#icon-viber-color"></use>
+              </svg>
+            </a>
+
+            <a href="/" class="feedback__telegramm">
+              <svg>
+                <use href="/symbol-defs.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="banner__image">
+            <img src="/dev_copmonent/bg-mob.png" alt="" srcset="" />
+          </div>
+
+          <div class="banner__textblock">
+            <h3 class="banner__title">
+              СПРОБУЙ вчасно <br />
+              чистка обличча
+              <span class="banner__title accent">знижка -20%</span>
+            </h3>
+            <p class="banner__subtitle">
+              Комбінована чистка обличчя — це поєднання декількох
+              косметологічних методів очищення
+            </p>
+            <p class="banner__price">
+              3450
+              <span class="banner__price_currant">грн</span>
+              <span class="banner__price accent"> 3450 </span>
+              <span class="banner__price_currant accent">грн</span>
+            </p>
+          </div>
+
+          <div class="banner__buttonblock">
+            <button type="button" class="button-text banner__button register">
+              Записатися на прийом
+            </button>
+            <button type="button" class="button-text banner__button detail">
+              Детальніше
+              <svg class="banner__button_icon">
+                <use href="/symbol-defs.svg#icon-longArrow"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="slider__controller">
+            <p class="slider__count">
+              <span class="slider__count_active">01</span>
+              /
+              <span class="slider__count_total">05</span>
+            </p>
+            <div class="slider__buttonblock">
+              <button type="button" class="slider__button left">
+                <svg class="slider__button_icon">
+                  <use href="/symbol-defs.svg#icon-arrow"></use>
+                </svg>
+              </button>
+              <button type="button" class="slider__button right">
+                <svg class="slider__button_icon">
+                  <use href="/symbol-defs.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="slider__dotblock">
+              <button type="button" class="slider__dot accent"></button>
+              <button type="button" class="slider__dot"></button>
+              <button type="button" class="slider__dot"></button>
+              <button type="button" class="slider__dot"></button>
+              <button type="button" class="slider__dot"></button>
+            </div>
+          </div>
+        </div>
+        <span class="sectionarrowdown"></span>
+      </div>
+    </div>
+
+    <div class="about section container">
+      <div class="about__block">
+        <h1 class="about__title title">КОСМЕТОЛОГІЯ VITALINE</h1>
+        <h2 class="about__subtitle">
+          Краса через здоров'я і комфорт понад усе.
+        </h2>
+        <div class="about__text">
+          <p>
+            Сучасна медицина базується на професіоналізмі. Лікарі, які працюють
+            в клініці - середній вік 35 років. Вони приймають рішення на основі
+            доказової медицини та актуальних наукових даних. Все обладнання
+            клініки має європейську сертифікацію та сертифікацію FDA
+          </p>
+          <p>
+            Сучасна медицина базується на ефективності в усьому. Ми знаходимо
+            баланс фінансових витрат та витрат часу, для отримання найкращого
+            результату. Прийом по запису, без очікувань. Підтримка в
+            месенджерах. Найкраще співвідношення ціна якість, пакетні програми,
+            система знижок.
+          </p>
+          <p>
+            Сучасна клініка Vitaline працює для вашого комфорту і зручності! Ми
+            цінуємо ваш час, ваші гроші і наші довгострокові відносини. Краса
+            через здоров'я і комфорт понад усе.
+          </p>
+        </div>
+      </div>
+
+      <img src="/dev_copmonent/about.png" alt="" class="about__image" />
+
+      <button type="button" class="button-text about__button">
+        Детальніше
+      </button>
+    </div>
+
+    <div class="services section">
+      <div class="container">
+        <h2 class="services__title title">Послуги медичного центру</h2>
+        <div class="services__wrapp">
+          <a href="" class="services__card">
+            <div class="services__card_inner">
+              <div class="services__card_content">
+                <div class="services__imageblock">
+                  <img
+                    src="/dev_copmonent/card.png"
+                    alt=""
+                    class="services__image"
+                  />
+                </div>
+                <h3 class="services__name">Косметологія</h3>
+                <p class="services__text">
+                  Косметологія – це одне з найпопулярніших направлень в нашій
+                  клініці. Адже кожна людина завжди прагне бути гарною,
+                  доглянутою та здоровою. 
+                </p>
+                <div class="services__iconbtn">
+                  <svg class="services__icon">
+                    <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="" class="services__card">
+            <div class="services__card_inner">
+              <div class="services__card_content">
+                <div class="services__imageblock">
+                  <img
+                    src="/dev_copmonent/card.png"
+                    alt=""
+                    class="services__image"
+                  />
+                </div>
+                <h3 class="services__name">Косметологія</h3>
+                <p class="services__text">
+                  Косметологія – це одне з найпопулярніших направлень в нашій
+                  клініці. Адже кожна людина завжди прагне бути гарною,
+                  доглянутою та здоровою. 
+                </p>
+                <div class="services__iconbtn">
+                  <svg class="services__icon">
+                    <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="" class="services__card">
+            <div class="services__card_inner">
+              <div class="services__card_content">
+                <div class="services__imageblock">
+                  <img
+                    src="/dev_copmonent/card.png"
+                    alt=""
+                    class="services__image"
+                  />
+                </div>
+                <h3 class="services__name">Косметологія</h3>
+                <p class="services__text">
+                  Косметологія – це одне з найпопулярніших направлень в нашій
+                  клініці. Адже кожна людина завжди прагне бути гарною,
+                  доглянутою та здоровою. 
+                </p>
+                <div class="services__iconbtn">
+                  <svg class="services__icon">
+                    <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="" class="services__card">
+            <div class="services__card_inner">
+              <div class="services__card_content">
+                <div class="services__imageblock">
+                  <img
+                    src="/dev_copmonent/card.png"
+                    alt=""
+                    class="services__image"
+                  />
+                </div>
+                <h3 class="services__name">Косметологія</h3>
+                <p class="services__text">
+                  Косметологія – це одне з найпопулярніших направлень в нашій
+                  клініці. Адже кожна людина завжди прагне бути гарною,
+                  доглянутою та здоровою. 
+                </p>
+                <div class="services__iconbtn">
+                  <svg class="services__icon">
+                    <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <span class="sectionarrowdown"></span>
+      </div>
+    </div>
+
+    <div class="doctors section">
+      <div class="doctors container">
+        <h3 class="doctors__title title">НАШІ ЛІКАРІ</h3>
+
+        <div class="carusel">
+          <div class="carusel__wrapper">
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="/dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        Записатись
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        Детальніше
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="/symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="/dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        Записатись
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        Детальніше
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="/symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="/dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        Записатись
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        Детальніше
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="/symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="/dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        Записатись
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        Детальніше
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="/symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carusel__buttonblock">
+          <div class="carusel__controllers">
+            <button type="button" class="carusel__btn left button-icon">
+              <svg class="carusel__icon">
+                <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+              </svg>
+            </button>
+            <button type="button" class="carusel__btn right button-icon">
+              <svg class="carusel__icon">
+                <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+              </svg>
+            </button>
+          </div>
+          <a href="/" class="carusel__linkAll button-text"
+            >Дивитись усіх лікарів</a
+          >
+        </div>
+        <span class="sectionarrowdown light"></span>
+      </div>
+    </div>
+
+    <div class="reviews section">
+      <div class="reviews container">
+        <h3 class="title reviews__title">ВІДГУКИ та наша Відповідальність</h3>
+        <div class="carusel">
+          <div class="carusel__wrapper">
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="reviews__card card">
+                  <div class="reviews__topblock">
+                    <div class="reviews__topblock_wrapp">
+                      <p class="reviews__topblock_name">Анастасия</p>
+                      <p class="reviews__topblock_date">18 января 2023</p>
+                    </div>
+                    <svg class="reviews__topblock_icon">
+                      <use href="/symbol-defs.svg#icon-mini-logo"></use>
+                    </svg>
+                  </div>
+                  <p class="reviews__text">
+                    Хочу висловити свою глибоку вдячність
+                    лікарю-гастроентерологу за професіоналізм і турботу! 🙌 Вона
+                    докладає неймовірних зусиль, щоб кожен пацієнт почував себе
+                    зрозумілим і впевненим в лікуванні. Лікар детально
+                    роз'яснила мені про моє становище, приділила увагу кожній
+                    дрібниці і запропонувала найкращі методи лікування. Її
+                    відданість і доброзичливість справили неймовірно позитивне
+                    враження на мене! 🌈 Відтепер я відчуваю себе в надійних
+                    руках цього видатного фахівця. Дякую за Ваш професіоналізм,
+                    турботу та підтримку! Рекомендую цього лікаря усім, хто
+                    шукає дійсно якісну медичну допомогу. 👩‍⚕️
+                  </p>
+
+                  <div class="reviews__textcontrol">
+                    <button type="button" class="reviews__textcontrol_btn">
+                      Читати далі
+                    </button>
+                    <a href="" class="reviews__textcontrol_link">Про лiкаря</a>
+                  </div>
+
+                  <div class="reviews__doctor">
+                    <img
+                      src="/dev_copmonent/minidoctor.png"
+                      alt=""
+                      srcset=""
+                      class="reviews__doctor_image"
+                    />
+                    <div class="reviews__doctor_info">
+                      <p class="reviews__doctor_name">
+                        Красуля Анастасія Романівна
+                      </p>
+                      <p class="reviews__doctor_position">
+                        Главный врач, врач-стомат...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="reviews__card card">
+                  <div class="reviews__topblock">
+                    <div class="reviews__topblock_wrapp">
+                      <p class="reviews__topblock_name">Анастасия</p>
+                      <p class="reviews__topblock_date">18 января 2023</p>
+                    </div>
+                    <svg class="reviews__topblock_icon">
+                      <use href="/symbol-defs.svg#icon-mini-logo"></use>
+                    </svg>
+                  </div>
+                  <p class="reviews__text">
+                    Хочу висловити свою глибоку вдячність
+                    лікарю-гастроентерологу за професіоналізм і турботу! 🙌 Вона
+                    докладає неймовірних зусиль, щоб кожен пацієнт почував себе
+                    зрозумілим і впевненим в лікуванні. Лікар детально
+                    роз'яснила мені про моє становище, приділила увагу кожній
+                    дрібниці і запропонувала найкращі методи лікування. Її
+                    відданість і доброзичливість справили неймовірно позитивне
+                    враження на мене! 🌈 Відтепер я відчуваю себе в надійних
+                    руках цього видатного фахівця. Дякую за Ваш професіоналізм,
+                    турботу та підтримку! Рекомендую цього лікаря усім, хто
+                    шукає дійсно якісну медичну допомогу. 👩‍⚕️
+                  </p>
+
+                  <div class="reviews__textcontrol">
+                    <button type="button" class="reviews__textcontrol_btn">
+                      Читати далі
+                    </button>
+                    <a href="" class="reviews__textcontrol_link">Про лiкаря</a>
+                  </div>
+
+                  <div class="reviews__doctor">
+                    <img
+                      src="/dev_copmonent/minidoctor.png"
+                      alt=""
+                      srcset=""
+                      class="reviews__doctor_image"
+                    />
+                    <div class="reviews__doctor_info">
+                      <p class="reviews__doctor_name">
+                        Красуля Анастасія Романівна
+                      </p>
+                      <p class="reviews__doctor_position">
+                        Главный врач, врач-стомат...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="reviews__card card">
+                  <div class="reviews__topblock">
+                    <div class="reviews__topblock_wrapp">
+                      <p class="reviews__topblock_name">Анастасия</p>
+                      <p class="reviews__topblock_date">18 января 2023</p>
+                    </div>
+                    <svg class="reviews__topblock_icon">
+                      <use href="/symbol-defs.svg#icon-mini-logo"></use>
+                    </svg>
+                  </div>
+                  <p class="reviews__text">
+                    Хочу висловити свою глибоку вдячність
+                    лікарю-гастроентерологу за професіоналізм і турботу! 🙌 Вона
+                    докладає неймовірних зусиль, щоб кожен пацієнт почував себе
+                    зрозумілим і впевненим в лікуванні. Лікар детально
+                    роз'яснила мені про моє становище, приділила увагу кожній
+                    дрібниці і запропонувала найкращі методи лікування. Її
+                    відданість і доброзичливість справили неймовірно позитивне
+                    враження на мене! 🌈 Відтепер я відчуваю себе в надійних
+                    руках цього видатного фахівця. Дякую за Ваш професіоналізм,
+                    турботу та підтримку! Рекомендую цього лікаря усім, хто
+                    шукає дійсно якісну медичну допомогу. 👩‍⚕️
+                  </p>
+
+                  <div class="reviews__textcontrol">
+                    <button type="button" class="reviews__textcontrol_btn">
+                      Читати далі
+                    </button>
+                    <a href="" class="reviews__textcontrol_link">Про лiкаря</a>
+                  </div>
+
+                  <div class="reviews__doctor">
+                    <img
+                      src="/dev_copmonent/minidoctor.png"
+                      alt=""
+                      srcset=""
+                      class="reviews__doctor_image"
+                    />
+                    <div class="reviews__doctor_info">
+                      <p class="reviews__doctor_name">
+                        Красуля Анастасія Романівна
+                      </p>
+                      <p class="reviews__doctor_position">
+                        Главный врач, врач-стомат...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carusel__buttonwrapper">
+          <div class="carusel__buttonblock">
+            <div class="carusel__controllers">
+              <button type="button" class="carusel__btn left button-icon">
+                <svg class="carusel__icon">
+                  <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+                </svg>
+              </button>
+              <button type="button" class="carusel__btn right button-icon">
+                <svg class="carusel__icon">
+                  <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+                </svg>
+              </button>
+            </div>
+            <a href="/" class="carusel__linkAll button-text"
+              >Дивитись усіх лікарів</a
+            >
+          </div>
+          <button type="button" class="carusel__accentbtn">
+            <svg class="carusel__accentbtn_icon">
+              <use href="/symbol-defs.svg#icon-check-heart"></use>
+            </svg>
+            Залишити відгук
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio section">
+      <div class="container">
+        <h3 class="title portfolio__title">фотогалерея</h3>
+        <p class="portfolio__subtitle">Ми даємо гарантований результат</p>
+        <div class="portfolio__wrapper">
+          <img
+            src="/dev_copmonent/portfolio.png"
+            alt=""
+            class="portfolio__photo"
+          />
+        </div>
+
+        <div class="carusel__buttonwrapper">
+          <div class="carusel__buttonblock">
+            <div class="carusel__controllers">
+              <button type="button" class="carusel__btn left button-icon">
+                <svg class="carusel__icon">
+                  <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+                </svg>
+              </button>
+              <button type="button" class="carusel__btn right button-icon">
+                <svg class="carusel__icon">
+                  <use href="/symbol-defs.svg#icon-arrowUpRight"></use>
+                </svg>
+              </button>
+            </div>
+            <a href="/" class="carusel__linkAll button-text"
+              >Дивитись всі фото</a
+            >
+          </div>
+          <button type="button" class="carusel__accentbtn">
+            <svg class="carusel__accentbtn_icon">
+              <use href="/symbol-defs.svg#icon-check"></use>
+            </svg>
+            Хочу такий результат
+          </button>
+        </div>
+
+        <span class="sectionarrowdown"></span>
+      </div>
+    </div>
+
+    <div class="footer section">
+      <div class="container">
+        <div class="footer__nav">
+          <div class="footer__nav_wrapp">
+            <h4 class="footer__nav_title">Косметологія</h4>
+            <ul class="footer__nav_list">
+              <li class="footer__nav_item">Чистка обличчя</li>
+              <li class="footer__nav_item">Пілінги</li>
+              <li class="footer__nav_item">Мезотерапія</li>
+              <li class="footer__nav_item">Біоревіталізація</li>
+              <li class="footer__nav_item">Контурна пластика</li>
+              <li class="footer__nav_item">Ботулінотерапія</li>
+              <li class="footer__nav_item">Мезотерапія</li>
+              <li class="footer__nav_item">Біоревіталізація</li>
+            </ul>
+          </div>
+
+          <div class="footer__nav_wrapp">
+            <h4 class="footer__nav_title hidden">Косметологія</h4>
+            <ul class="footer__nav_list">
+              <li class="footer__nav_item">Чистка обличчя</li>
+              <li class="footer__nav_item">Пілінги</li>
+              <li class="footer__nav_item">Мезотерапія</li>
+              <li class="footer__nav_item">Біоревіталізація</li>
+              <li class="footer__nav_item">Контурна пластика</li>
+              <li class="footer__nav_item">Ботулінотерапія</li>
+              <li class="footer__nav_item">Мезотерапія</li>
+              <li class="footer__nav_item">Біоревіталізація</li>
+            </ul>
+          </div>
+          <div class="footer__nav_wrapp">
+            <h4 class="footer__nav_title">Косметологія</h4>
+            <ul class="footer__nav_list">
+              <li class="footer__nav_item">Чистка обличчя</li>
+              <li class="footer__nav_item">Пілінги</li>
+              <li class="footer__nav_item">Мезотерапія</li>
+              <li class="footer__nav_item">Біоревіталізація</li>
+              <li class="footer__nav_item">Контурна пластика</li>
+              <li class="footer__nav_item">Ботулінотерапія</li>
+              <li class="footer__nav_item">Мезотерапія</li>
+              <li class="footer__nav_item">Біоревіталізація</li>
+              <li class="footer__nav_item">Контурна пластика</li>
+              <li class="footer__nav_item">Ботулінотерапія</li>
+            </ul>
+          </div>
+
+          <div class="footer__nav_wrapp">
+            <h4 class="footer__nav_title">Косметологія</h4>
+            <ul class="footer__nav_list">
+              <li class="footer__nav_item">Чистка обличчя</li>
+              <li class="footer__nav_item">Пілінги</li>
+              <li class="footer__nav_item">Мезотерапія</li>
+              <li class="footer__nav_item">Біоревіталізація</li>
+              <li class="footer__nav_item">Контурна пластика</li>
+              <li class="footer__nav_item">Ботулінотерапія</li>
+              <li class="footer__nav_item">Мезотерапія</li>
+              <li class="footer__nav_item">Біоревіталізація</li>
+              <li class="footer__nav_item">Контурна пластика</li>
+              <li class="footer__nav_item">Ботулінотерапія</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__info">
+          <div class="footer__topblock">
+            <h3 class="footer__title">
+              НАПИШИ НАМ У СВОЄМУ УЛЮБЛЕНОМУ МЕСЕНДЖЕРI
+            </h3>
+            <div class="footer__social">
+              <div class="footer__social_block">
+                <a href="/" class="feedback__telegramm">
+                  <svg>
+                    <use href="/symbol-defs.svg#icon-telegram"></use>
+                  </svg>
+                </a>
+
+                <a href="/" class="feedback__viber">
+                  <svg>
+                    <use href="/symbol-defs.svg#icon-viber-color-light"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <a href="" class="feedback__insta button-icon">
+                <svg>
+                  <use href="/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </div>
+            <button type="button" class="footer__button button-text">
+              онлайн запис
+            </button>
+          </div>
+          <div class="header">
+            <a href="/index.html" class="logo__link">
+              <svg class="logo__icon">
+                <use href="/symbol-defs.svg#icon-logo"></use>
+              </svg>
+            </a>
+
+            <div class="address__wrapper">
+              <svg class="address__icon">
+                <use href="/symbol-defs.svg#icon-marker-pin"></use>
+              </svg>
+              <p class="address__text">
+                м. Київ, ЖК "Крістер Град", <br />
+                вул. Сергія Данченка 5, корпус 5
+              </p>
+            </div>
+
+            <div class="schedule__wrapper">
+              <svg class="schedule__icon">
+                <use href="/symbol-defs.svg#icon-clock-check"></use>
+              </svg>
+              <p class="schedule__text">
+                Вт, Ср, Пт: 10.00 - 19.00. <br />
+
+                Сб, Нд: 10.00 - 16.00. Пн, Чт: вихідний
+              </p>
+            </div>
+
+            <div class="tel__wrapper">
+              <img
+                src="/dev_copmonent/Rectangleuser.png"
+                alt="manager"
+                srcset=""
+                class="tel__manager"
+              />
+              <a href="tel:+380931097091" class="tel__link"
+                >+ 38 093 109 70 91</a
+              >
+            </div>
+          </div>
+          <div class="footer__confid_wrapp">
+            <a href="/" class="footer__confid">
+              Ліцензія наказ МОЗ України <br />
+              №1644 від 18.09.2023
+            </a>
+            <p class="footer__confid">
+              © VitaLine, 2024 <br />
+              Всі права захищено
+            </p>
+            <p class="footer__confid">
+              Design and development <br />
+              by UmeloAgency
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="js/modal.js"></script> -->
+    <!-- <script src="js/carusel.js"></script> -->
+  </body>
+</html>

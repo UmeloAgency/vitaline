@@ -1,0 +1,11 @@
+.mobile-menu {
+  @include pos(fixed, 0, 0, 0, 110vw);
+  z-index: z('mobile-menu');
+  width: 100%;
+  overflow: auto;
+  transition: all 1s linear;
+
+  &.is-open {
+    left: 0;
+  }
+}

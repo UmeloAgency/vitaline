@@ -1,0 +1,152 @@
+.doctorcard {
+  &__photo {
+    height: 57.4%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    @include _1024 {
+      height: 68.7%;
+    }
+  }
+
+  &__block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: $light-color;
+    border-radius: 0px 0px 5px 5px;
+
+    @include _1024 {
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
+
+  &__text {
+    background-color: $light-color;
+    padding-bottom: 24px;
+    border-radius: 0px 0px 5px 5px;
+
+    @include _1024 {
+      padding-bottom: 23px;
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
+  &__title {
+    @include font(15px, 700, $light-color, 112%);
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    background-color: $semi-dark-color;
+    border-radius: 0 20px 0 0;
+
+    @include _1024 {
+      font-size: 16px;
+      padding-left: 28px;
+    }
+  }
+  &__name {
+    @include font(15px, 600, $dark-color, 112%);
+    margin-top: 17px;
+    margin-bottom: 9px;
+    margin-left: 20px;
+    margin-right: 16px;
+    height: 36px;
+    overflow: hidden;
+
+    @include _1024 {
+      font-size: 17px;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      margin-left: 28px;
+      margin-right: 24px;
+      height: 40px;
+    }
+  }
+  &__position {
+    @include font(12px, 500, $semi-dark-color, 133%);
+    margin-bottom: 19px;
+    margin-left: 20px;
+    margin-right: 16px;
+    height: 32px;
+    overflow: hidden;
+
+    @include _1024 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      margin-left: 28px;
+      margin-right: 24px;
+    }
+  }
+  &__link {
+    @include font(12px, 500, $accent-color, 133%);
+    display: block;
+    margin-left: 20px;
+
+    @include _1024 {
+      font-size: 14px;
+      margin-left: 28px;
+    }
+  }
+  &__buttonblock {
+    @include flex(space-between);
+    padding-left: 20px;
+    padding-right: 16px;
+    padding-bottom: 20px;
+    border-radius: 0px 0px 5px 5px;
+
+    @include _1024 {
+      padding-top: 14px;
+      padding-bottom: 30px;
+      padding-left: 28px;
+      padding-right: 24px;
+      background-color: $light-color;
+      border-radius: 0px 0px 10px 10px;
+      transition: all 0.5s linear;
+
+      @include pos(absolute, auto, 0, 0, 0);
+      z-index: -1;
+    }
+  }
+  &__button {
+    @include font(13px, 600, $light-color, 112%);
+    width: calc((100% - 15px) / 2);
+    text-transform: none;
+
+    &:last-child {
+      background-color: $dark-color;
+      color: $light-color;
+    }
+
+    @include _1024 {
+      height: 39px;
+    }
+  }
+
+  &__like {
+    @include flex();
+    @include button(false);
+    flex-direction: column;
+    @include pos(absolute, 19px, 21px);
+    z-index: 1;
+    &_icon {
+      height: 24px;
+      width: 24px;
+      stroke: $semi-dark-color;
+      margin-bottom: 2px;
+    }
+    &_text {
+      @include font(14px, 400, $semi-dark-color, 112%);
+    }
+  }
+}
+
+.card__wrapper {
+  @include _1024 {
+    &:hover .doctorcard__buttonblock {
+      bottom: -74px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.modal-window {
+  @include pos(fixed, 0, 0, 0, 0);
+  z-index: z('modal');
+  overflow: auto;
+  visibility: hidden;
+
+  &.is-open {
+    visibility: visible;
+  }
+
+  &__close {
+    // height: 38px;
+    // width: 38px;
+    @include flex();
+    @include pos(absolute, 30px, 8%);
+    // @include button($trans-color, transparent, 100%);
+
+    &_icon {
+      // fill: $light-color;
+      // width: 24px;
+      // height: 24px;
+    }
+  }
+}

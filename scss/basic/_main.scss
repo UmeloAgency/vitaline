@@ -1,0 +1,41 @@
+body {
+  background-color: $semi-light-color;
+  // @include flex();
+}
+
+.section {
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+
+  @include _u340 {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  @include _640 {
+    width: auto;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  @include _1024 {
+    width: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include _1248 {
+    width: 1248px;
+    padding-left: 58px;
+    padding-right: 66px;
+  }
+}

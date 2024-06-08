@@ -1,0 +1,39 @@
+@mixin flex($just-cont: center, $al-item: center, $direct: row) {
+  display: flex;
+  align-items: $al-item;
+  justify-content: $just-cont;
+  flex-direction: $direct;
+}
+
+@mixin border($color: $light-color, $width: 1px) {
+  border: $width solid $color;
+}
+
+@mixin button(
+  $color: $light-color,
+  $background: transparent,
+  $radius: false,
+  $width: 1px
+) {
+  border: none;
+  background-color: $background;
+  cursor: pointer;
+
+  @if $radius {
+    border-radius: $radius;
+  }
+
+  @if $color {
+    border: $width solid $color;
+  }
+}
+
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin visible($state: 'block') {
+  display: unquote($state);
+  visibility: visible;
+}

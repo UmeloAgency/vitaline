@@ -1,0 +1,19 @@
+//first div
+@mixin retinacontainer-width($width) {
+  width: $width;
+  position: relative;
+}
+
+//second div
+@mixin retinacontainer-height($height) {
+  position: relative;
+  height: 0;
+  border: none;
+  padding-top: $height;
+}
+
+//third div
+@mixin retinacontainer-content {
+  z-index: 1;
+  @include pos(absolute, 0, 0, 0, 0);
+}

@@ -1,0 +1,305 @@
+.nav {
+  background-color: $dark-color;
+
+  .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__nav {
+    @include hidden;
+
+    @include _1024 {
+      @include visible('flex');
+    }
+  }
+
+  &__list {
+    @include flex();
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    &:hover .nav__item:before {
+      scale: 1;
+    }
+    &:hover .nav__item:has(~ &__item:hover):before {
+      translate: 100% 0;
+      transition: 0.2s 0.2s, scale 0s 0.4s;
+    }
+    &:hover .nav__item:hover ~ .nav__item:before {
+      translate: -100% 0;
+      transition: 0.2s 0.2s, scale 0s 0.4s;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 2;
+    &.accent {
+      overflow: visible;
+    }
+
+    &:first-child {
+      margin-left: -12px;
+    }
+
+    &:last-child {
+      margin-right: -12px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      inset: calc(100% - 1px) 0 0 0;
+      background: $semi-dark-color;
+      scale: 0 1;
+      transition: 0.3s, translate 0s 0.3s;
+    }
+
+    &:hover:before {
+      translate: 0;
+      transition: 0.3s;
+    }
+  }
+
+  &__link {
+    position: relative;
+    @include font(15px, 600, $light-color, 109%);
+    @include flex(space-between);
+    padding-bottom: 5px;
+    width: 100%;
+    padding-top: 7px;
+    padding-right: 12px;
+    padding-left: 12px;
+
+    @include _1024-1100 {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    &.multi-link:hover .nav__sublist {
+      @include visible('flex');
+    }
+
+    &.accent {
+      background-color: $semi-dark-color;
+      height: 30px;
+      border-radius: 100px;
+      padding-bottom: 7px;
+      transition: all 0.2s ease;
+      position: relative;
+
+      &:active {
+        transform: scale(0.96);
+      }
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        width: 150%;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+        z-index: -1000;
+        background-repeat: no-repeat;
+      }
+
+      &:hover:before {
+        top: -70%;
+        background-image: radial-gradient(
+            circle,
+            $semi-dark-color 20%,
+            transparent 20%
+          ),
+          radial-gradient(
+            circle,
+            transparent 20%,
+            $semi-dark-color 20%,
+            transparent 30%
+          ),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(
+            circle,
+            transparent 10%,
+            $semi-dark-color 15%,
+            transparent 20%
+          ),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%,
+          15% 15%, 10% 10%, 18% 18%;
+        background-position: 50% 120%;
+        animation: greentopBubbles 0.6s ease;
+      }
+
+      @keyframes greentopBubbles {
+        0% {
+          background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%,
+            25% 90%, 40% 90%, 55% 90%, 70% 90%;
+        }
+
+        50% {
+          background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+        }
+
+        100% {
+          background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%,
+            22% 40%, 50% 40%, 65% 10%, 90% 20%;
+          background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        }
+      }
+
+      &:hover::after {
+        bottom: -70%;
+        background-image: radial-gradient(
+            circle,
+            $semi-dark-color 20%,
+            transparent 20%
+          ),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(
+            circle,
+            transparent 10%,
+            $semi-dark-color 15%,
+            transparent 20%
+          ),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%),
+          radial-gradient(circle, $semi-dark-color 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%,
+          18% 18%;
+        background-position: 50% 0%;
+        animation: greenbottomBubbles 0.6s ease;
+      }
+
+      @keyframes greenbottomBubbles {
+        0% {
+          background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+        }
+
+        50% {
+          background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%,
+            95% 60%, 105% 0%;
+        }
+
+        100% {
+          background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%,
+            95% 70%, 110% 10%;
+          background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        }
+      }
+    }
+
+    &:hover {
+      color: $semi-accent-color;
+    }
+  }
+
+  &__sublist {
+  }
+
+  &__close {
+    width: 26px;
+    height: 22px;
+    stroke: $light-color;
+    fill: $accent-color;
+    @include visible;
+
+    @include _1024 {
+      @include hidden;
+    }
+  }
+
+  &__icon {
+    width: 13px;
+    height: 8px;
+    stroke: $medium-color;
+    fill: none;
+    margin-left: 13px;
+
+    @include _1024-1100 {
+      margin-left: 6px;
+    }
+  }
+
+  .language {
+    &__wrapper {
+      @include flex(space-between);
+      @include font(15px, 600, $semi-medium-color, 109%);
+      margin-right: 20px;
+      @include hidden;
+
+      @include _1024 {
+        @include visible('flex');
+      }
+    }
+    &__button {
+      padding-left: 2px;
+      padding-right: 2px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      @include font(15px, 600, $semi-dark-color, 109%);
+      cursor: pointer;
+
+      input {
+        @include hidden;
+      }
+
+      input:checked ~ label {
+        color: $semi-medium-color;
+      }
+    }
+    &__slash {
+      padding-left: 2px;
+      padding-right: 2px;
+      color: $semi-dark-color;
+    }
+  }
+
+  .button {
+    &__wrapper {
+      @include flex(space-between);
+    }
+
+    &__search {
+      @include hidden;
+      margin-right: 10px;
+
+      @include _1024 {
+        @include visible('flex');
+      }
+
+      svg {
+        width: 22px;
+        height: 22px;
+        stroke: $semi-medium-color;
+        fill: none;
+
+        @include _1024 {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+
+    &__online {
+      margin-left: 17px;
+      width: 118px;
+
+      @include _1024 {
+        margin-left: 10px;
+        width: 172px;
+      }
+    }
+  }
+}

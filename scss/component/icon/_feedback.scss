@@ -1,0 +1,33 @@
+.feedback {
+  &__insta {
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: $semi-accent-color;
+
+      @include _1024 {
+        width: 31px;
+        height: 31px;
+      }
+    }
+  }
+
+  &__viber,
+  &__telegramm {
+    display: block;
+    width: auto;
+    height: auto;
+    line-height: 0;
+
+    svg {
+      width: 21px;
+      height: 21px;
+      fill: $semi-medium-color;
+
+      @include _1024 {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}

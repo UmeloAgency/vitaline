@@ -1,0 +1,33 @@
+.portfolio {
+  &.section {
+    background-color: $semi-dark-color;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    color: $light-color;
+  }
+
+  &__subtitle {
+    @include font(13px, 600, $semi-medium-color, 112%);
+    margin-bottom: 25px;
+
+    @include _1024 {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  &__wrapper {
+    margin-bottom: 25px;
+  }
+  &__image {
+    border-radius: 5px 25px 5px 5px;
+    max-width: 306px;
+    height: 264px;
+  }
+
+  .carusel__accentbtn {
+    width: 238px;
+    max-width: 238px;
+  }
+}

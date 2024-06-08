@@ -1,0 +1,167 @@
+.reviews {
+  &.container {
+    padding-right: 0;
+  }
+
+  .card__wrapper {
+    margin-right: 8px;
+    @include _1024 {
+      margin-right: 16px;
+      @include retinacontainer-width(364px);
+    }
+  }
+
+  .card__inner {
+    @include retinacontainer-height(155.6%);
+  }
+
+  .carusel {
+    margin-bottom: 25px;
+    height: 418px;
+
+    @include _1024 {
+      height: 567px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .carusel__buttonblock {
+    @extend .container;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include _1024 {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  &__title {
+    padding-right: 30%;
+    margin-bottom: 25px;
+  }
+
+  &__card {
+    padding-top: 21px;
+    padding-left: 27px;
+    padding-right: 23px;
+    padding-bottom: 23px;
+
+    @include _1024 {
+      padding-top: 26px;
+      padding-left: 37px;
+      padding-right: 31px;
+      padding-bottom: 34px;
+    }
+  }
+  &__topblock {
+    margin-bottom: 18px;
+    @include flex(space-between);
+
+    @include _1024 {
+      margin-bottom: 27px;
+    }
+
+    &_name {
+      @include font(12px, 600, $dark-color, 123%);
+      margin-bottom: 7px;
+
+      @include _1024 {
+        font-size: 17px;
+        line-height: 117%;
+      }
+    }
+    &_date {
+      @include font(11px, 400, $medium-color, 112%);
+
+      @include _1024 {
+        font-size: 13px;
+      }
+    }
+    &_icon {
+      width: 30px;
+      height: 28px;
+      fill: $semi-dark-color;
+
+      @include _1024 {
+        width: 38px;
+        height: 37px;
+      }
+    }
+  }
+
+  &__text {
+    @include font(12px, 400, $dark-color, 112%);
+    height: 205px;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @include _1024 {
+      font-size: 14px;
+      height: 271px;
+      margin-bottom: 31px;
+    }
+  }
+
+  &__textcontrol {
+    @include flex(flex-start);
+    margin-bottom: 30px;
+
+    &_btn {
+      @include button(false);
+      padding: 5px 0;
+      @include font(14px, 600, $semi-dark-color, 112%);
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      margin-right: 41px;
+
+      @include _1024 {
+        padding: 10.5px 0;
+        margin-right: 33px;
+      }
+    }
+    &_link {
+      padding: 5px 0;
+      @include font(14px, 600, $accent-color, 112%);
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+
+      @include _1024 {
+        padding: 10.5px 0;
+      }
+    }
+  }
+
+  &__doctor {
+    @include flex(flex-start);
+    &_image {
+      border-radius: 100%;
+      width: 44px;
+      height: 44px;
+      margin-right: 10px;
+
+      @include _1024 {
+        width: 62px;
+        height: 61px;
+      }
+    }
+
+    &_name {
+      @include font(12px, 600, $semi-dark-color, 123%);
+      margin-bottom: 3px;
+
+      @include _1024 {
+        font-size: 17px;
+        line-height: 117%;
+        margin-bottom: 5px;
+      }
+    }
+    &_position {
+      @include font(11px, 500, $semi-dark-color, 133%);
+      @include _1024 {
+        font-size: 12px;
+      }
+    }
+  }
+}

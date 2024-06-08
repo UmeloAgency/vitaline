@@ -1,0 +1,21 @@
+.card {
+  @include retinacontainer-content;
+  border-radius: 5px 25px 5px 5px;
+  background-color: $light-color;
+
+  @include _1024 {
+    border-radius: 10px 36px 10px 10px;
+  }
+
+  &__wrapper {
+    @include retinacontainer-width(268px);
+    flex-shrink: 0;
+  }
+  &__inner {
+    @include retinacontainer-height(185.5%);
+
+    @include _1024 {
+      @include retinacontainer-height(178%);
+    }
+  }
+}

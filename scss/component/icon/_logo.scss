@@ -1,0 +1,11 @@
+.logo {
+  &__icon {
+    width: 124px;
+    height: 29px;
+
+    @include _1024 {
+      width: 190px;
+      height: 44px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.title {
+  @include font(18px, 600, $dark-color, 128%);
+  text-transform: uppercase;
+
+  @include _1024 {
+    font-size: 34px;
+    line-height: 112%;
+  }
+}

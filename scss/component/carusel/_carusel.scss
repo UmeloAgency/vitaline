@@ -1,0 +1,97 @@
+.carusel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &__wrapper {
+    @include flex(center, flex-start);
+    flex-wrap: nowrap;
+    @include pos(absolute, 0, auto, 0, 0);
+  }
+
+  &__buttonwrapper {
+    @include _1024 {
+      @include flex(space-between);
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__buttonblock {
+    @include flex(space-between);
+
+    @include _1024 {
+      flex-direction: row-reverse;
+      width: auto;
+    }
+  }
+
+  &__controllers {
+    @include flex();
+  }
+
+  &__btn {
+    background-color: $medium-color;
+
+    &.left {
+      transform: rotate(-135deg);
+      margin-right: 18px;
+    }
+    &.right {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__icon {
+    height: 27px;
+    width: 27px;
+    fill: $light-color;
+
+    @include _1024 {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  &__linkAll {
+    width: 173px;
+    background-color: $medium-color;
+    text-transform: none;
+
+    @include _1024 {
+      margin-right: 20px;
+      width: 234px;
+      font-size: 17px;
+    }
+  }
+
+  &__accentbtn {
+    @extend .button-text;
+    min-width: 212px;
+    width: 100%;
+    max-width: 306px;
+    margin: 0 auto;
+    margin-top: 25px;
+    text-transform: none;
+
+    @include _1024 {
+      margin: 0;
+      width: 212px;
+      max-width: 212px;
+      font-size: 16px;
+    }
+
+    &_icon {
+      width: 20px;
+      height: 20px;
+      stroke: $light-color;
+      fill: none;
+      margin-right: 14px;
+
+      @include _1024 {
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

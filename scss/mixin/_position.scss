@@ -1,0 +1,39 @@
+@mixin pos($pos: false, $t: false, $r: false, $b: false, $l: false) {
+  @if $pos {
+    position: $pos;
+  }
+  @if $t {
+    top: $t;
+  }
+  @if $r {
+    right: $r;
+  }
+  @if $b {
+    bottom: $b;
+  }
+  @if $l {
+    left: $l;
+  }
+}
+
+// по центру
+@mixin сentering-xy() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//по горизонталі
+@mixin сentering-x() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//по вертикалі
+@mixin сentering-y() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
