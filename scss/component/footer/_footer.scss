@@ -173,7 +173,7 @@
         position: absolute;
         left: -15px;
         @include сentering-y;
-        background-image: url('/static/svg/listik.svg');
+        background-image: url('./static/svg/listik.svg');
         background-size: cover;
         width: 9px;
         height: 11px;
