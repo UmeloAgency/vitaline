@@ -1,0 +1,42 @@
+.menu {
+  @include hidden;
+
+  @include _1024 {
+    @include visible(flex);
+    @include flex(space-between, flex-start);
+  }
+  &_wrapp {
+    margin-bottom: 78px;
+  }
+  &_title {
+    @include font(18px, 700, $dark-color, 112%);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+  &_list {
+  }
+  &_item {
+    position: relative;
+    @include font(15px, 600, $dark-color, 209%);
+
+    &:hover {
+      color: $accent-color;
+
+      &::before {
+        content: '';
+        display: flex;
+        position: absolute;
+        left: -15px;
+        @include сentering-y;
+        background-image: url('./static/svg/listik.svg');
+        background-size: cover;
+        width: 9px;
+        height: 11px;
+      }
+    }
+  }
+}

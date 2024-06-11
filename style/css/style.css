@@ -175,13 +175,13 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: -17px;
-  background-image: url(./static/svg/sectionarrowdown.svg);
+  background-image: url(/static/svg/sectionarrowdown.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .sectionarrowdown.light {
-  background-image: url(./static/svg/sectionarrowdown-light.svg);
+  background-image: url(/static/svg/sectionarrowdown-light.svg);
 }
 
 .title {
@@ -925,62 +925,6 @@ body {
   }
 }
 
-.footer__nav {
-  display: none;
-  visibility: hidden;
-}
-@media (min-width: 1024px) {
-  .footer__nav {
-    display: flex;
-    visibility: visible;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-}
-.footer__nav_wrapp {
-  margin-bottom: 78px;
-}
-.footer__nav_title {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 112%;
-  color: #c75671;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.footer__nav_title.hidden {
-  visibility: hidden;
-}
-.footer__nav_item {
-  position: relative;
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 209%;
-  color: #c75671;
-}
-.footer__nav_item:hover {
-  color: #f79967;
-}
-.footer__nav_item:hover::before {
-  content: "";
-  display: flex;
-  position: absolute;
-  left: -15px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-image: url("./static/svg/listik.svg");
-  background-size: cover;
-  width: 9px;
-  height: 11px;
-}
-
 .doctorcard__photo {
   height: 57.4%;
   width: 100%;
@@ -1178,6 +1122,62 @@ body {
   .card__wrapper:hover .doctorcard__buttonblock {
     bottom: -74px;
   }
+}
+
+.menu {
+  display: none;
+  visibility: hidden;
+}
+@media (min-width: 1024px) {
+  .menu {
+    display: flex;
+    visibility: visible;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+.menu_wrapp {
+  margin-bottom: 78px;
+}
+.menu_title {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 112%;
+  color: #c75671;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.menu_title.hidden {
+  visibility: hidden;
+}
+.menu_item {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 209%;
+  color: #c75671;
+}
+.menu_item:hover {
+  color: #f79967;
+}
+.menu_item:hover::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  left: -15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("./static/svg/listik.svg");
+  background-size: cover;
+  width: 9px;
+  height: 11px;
 }
 
 .banner.section {
