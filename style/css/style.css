@@ -1062,7 +1062,7 @@ body {
     padding-right: 24px;
     background-color: #ffffff;
     border-radius: 0px 0px 10px 10px;
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
     position: absolute;
     top: auto;
     right: 0;
@@ -1087,7 +1087,9 @@ body {
 }
 @media (min-width: 1024px) {
   .doctorcard__button {
+    opacity: 0;
     height: 39px;
+    transition: all 0.5s linear 0.4s;
   }
 }
 .doctorcard__like {
@@ -1122,6 +1124,9 @@ body {
 @media (min-width: 1024px) {
   .card__wrapper:hover .doctorcard__buttonblock {
     bottom: -74px;
+  }
+  .card__wrapper:hover .doctorcard__button {
+    opacity: 1;
   }
 }
 
