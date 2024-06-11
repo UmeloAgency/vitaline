@@ -175,13 +175,13 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: -17px;
-  background-image: url(/static/svg/sectionarrowdown.svg);
+  background-image: url(../../static/svg/sectionarrowdown.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .sectionarrowdown.light {
-  background-image: url(/static/svg/sectionarrowdown-light.svg);
+  background-image: url(../../static/svg/sectionarrowdown-light.svg);
 }
 
 .title {
