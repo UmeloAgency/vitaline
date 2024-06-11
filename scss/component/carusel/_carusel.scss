@@ -42,13 +42,13 @@
   }
 
   &__icon {
-    height: 27px;
-    width: 27px;
+    height: 19px;
+    width: 19px;
     fill: $light-color;
 
     @include _1024 {
-      width: 34px;
-      height: 34px;
+      width: 24px;
+      height: 24px;
     }
   }
 

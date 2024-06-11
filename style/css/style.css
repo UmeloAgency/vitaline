@@ -129,7 +129,7 @@ body {
 .button-text *, .carusel__accentbtn *, .button-text, .carusel__accentbtn {
   font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 112%;
   color: #ffffff;
@@ -330,14 +330,14 @@ body {
   transform: rotate(45deg);
 }
 .carusel__icon {
-  height: 27px;
-  width: 27px;
+  height: 19px;
+  width: 19px;
   fill: #ffffff;
 }
 @media (min-width: 1024px) {
   .carusel__icon {
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
   }
 }
 .carusel__linkAll {
@@ -743,6 +743,7 @@ body {
 .nav .button__online {
   margin-left: 17px;
   width: 118px;
+  font-size: 10px;
 }
 @media (min-width: 1024px) {
   .nav .button__online {

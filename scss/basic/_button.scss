@@ -5,7 +5,7 @@
 
   *,
   & {
-    @include font(10px, 700, $light-color, 112%);
+    @include font(13px, 700, $light-color, 112%);
     text-transform: uppercase;
     text-align: center;
   }
