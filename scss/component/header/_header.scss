@@ -1,82 +1,92 @@
 .header {
+  bottom: 75%;
+  transition: bottom 0.9s linear;
+  z-index: 1;
+
   .container {
     padding-top: 15px;
     padding-bottom: 15px;
     @include flex(space-between);
+    background-color: $semi-light-color;
+  }
+}
+.tel {
+  &__wrapper {
+    @include flex();
   }
 
-  .tel {
-    &__wrapper {
-      @include flex();
-    }
+  &__manager {
+    height: 31px;
+    width: 31px;
+    @include border($semi-medium-color);
+    border-radius: 100%;
+    margin-right: 4px;
 
-    &__manager {
-      height: 31px;
-      width: 31px;
-      @include border($semi-medium-color);
-      border-radius: 100%;
-      margin-right: 4px;
-
-      @include _1024 {
-        margin-right: 9px;
-      }
-    }
-    &__link {
-      @include font(14px, 600, $dark-color, 112%, $second-font);
-
-      @include _300 {
-        font-size: 11px;
-      }
+    @include _1024 {
+      margin-right: 9px;
+      height: 41px;
+      width: 41px;
     }
   }
+  &__link {
+    @include font(14px, 600, $dark-color, 112%, $second-font);
 
-  .address {
-    &__wrapper {
-      @include hidden;
-
-      @include _1024 {
-        @include visible('flex');
-        @include flex(center, flex-start);
-      }
+    @include _1024 {
+      font-size: 20px;
     }
 
-    &__icon {
-      width: 24px;
-      height: 24px;
-      stroke: $accent-color;
-      fill: none;
-      margin-top: 3px;
-      margin-right: 5px;
+    @include _300 {
+      font-size: 11px;
     }
+  }
+}
 
-    &__text {
-      width: 210px;
-      @include font(12px, 500, $semi-dark-color, 133%);
+.address {
+  &__wrapper {
+    @include hidden;
+
+    @include _1024 {
+      @include visible('flex');
+      @include flex(center, flex-start);
     }
   }
 
-  .schedule {
-    &__wrapper {
-      @include hidden;
+  &__icon {
+    width: 24px;
+    height: 24px;
+    stroke: $accent-color;
+    fill: none;
+    margin-top: 3px;
+    margin-right: 5px;
+  }
 
-      @include _1024 {
-        @include visible('flex');
-        @include flex(center, flex-start);
-      }
-    }
+  &__text {
+    width: 210px;
+    @include font(12px, 500, $semi-dark-color, 133%);
+  }
+}
 
-    &__icon {
-      width: 24px;
-      height: 24px;
-      stroke: $accent-color;
-      fill: none;
-      margin-top: 3px;
-      margin-right: 5px;
-    }
+.schedule {
+  &__wrapper {
+    @include hidden;
 
-    &__text {
-      width: 245px;
-      @include font(12px, 500, $semi-dark-color, 133%);
+    @include _1024 {
+      @include visible('flex');
+      @include flex(center, flex-start);
     }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    stroke: $accent-color;
+    fill: none;
+    margin-top: 3px;
+    margin-right: 5px;
+  }
+
+  &__text {
+    width: 245px;
+    @include font(12px, 500, $semi-dark-color, 133%);
   }
 }

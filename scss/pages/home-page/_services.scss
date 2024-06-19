@@ -30,10 +30,13 @@
     margin-right: 8px;
 
     @include _1024 {
-      @include retinacontainer-width(calc((100% - 32px) / 2));
+      @include retinacontainer-width(calc((100% - 16px) / 2));
       margin-right: 16px;
       margin-bottom: 16px;
 
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
       &:hover .services__iconbtn {
         @include visible(flex);
       }
@@ -56,6 +59,7 @@
         padding-right: 50px;
         padding-bottom: 26px;
         padding-top: 44%;
+        border-radius: 10px 36px 10px 10px;
       }
     }
   }

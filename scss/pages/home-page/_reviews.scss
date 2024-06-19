@@ -73,7 +73,7 @@
       }
     }
     &_date {
-      @include font(11px, 400, $medium-color, 112%);
+      @include font(11px, 400, $medium-color, 112%, $second-font);
 
       @include _1024 {
         font-size: 13px;

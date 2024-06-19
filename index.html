@@ -20,13 +20,318 @@
     <link rel="stylesheet" href="./style/css/style.min.css" />
   </head>
   <body>
-    <header class="header section">
-      <div class="container">
-        <a href="/index.html" class="logo__link">
-          <svg class="logo__icon">
-            <use href="./symbol-defs.svg#icon-logo"></use>
+    <div class="navmobile__container" data-menu>
+      <header class="header section">
+        <div class="container">
+          <a href="/index.html" class="logo__link">
+            <svg class="logo__icon">
+              <use href="./symbol-defs.svg#icon-logo"></use>
+            </svg>
+          </a>
+
+          <div class="address__wrapper">
+            <svg class="address__icon">
+              <use href="./symbol-defs.svg#icon-marker-pin"></use>
+            </svg>
+            <p class="address__text">
+              м. Київ, ЖК "Крістер Град", <br />
+              вул. Сергія Данченка 5, корпус 5
+            </p>
+          </div>
+
+          <div class="schedule__wrapper">
+            <svg class="schedule__icon">
+              <use href="./symbol-defs.svg#icon-clock-check"></use>
+            </svg>
+            <p class="schedule__text">
+              Вт, Ср, Пт: 10.00 - 19.00. <br />
+
+              Сб, Нд: 10.00 - 16.00. Пн, Чт: вихідний
+            </p>
+          </div>
+
+          <div class="tel__wrapper">
+            <img
+              src="./dev_copmonent/Rectangleuser.png"
+              alt="manager"
+              srcset=""
+              class="tel__manager"
+            />
+            <a href="tel:+380931097091" class="tel__link">+ 38 093 109 70 91</a>
+          </div>
+        </div>
+
+        <div class="nav">
+          <div class="container">
+            <button type="button" class="nav__close">
+              <label class="nav__close_burger" for="burger">
+                <input type="checkbox" id="burger" />
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </button>
+
+            <nav class="nav__nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="" class="nav__link">Про клініку</a>
+                </li>
+                <li class="nav__item multi-link">
+                  <a href="" class="nav__link multi-link"
+                    >Послуги
+
+                    <svg class="nav__icon">
+                      <use href="./symbol-defs.svg#icon-arrow"></use>
+                    </svg>
+                  </a>
+                  <div class="menu nav__sublist">
+                    <div class="menu__wrapp">
+                      <h4 class="menu__title">Косметологія</h4>
+                      <ul class="menu__list">
+                        <li class="menu__item">Чистка обличчя</li>
+                        <li class="menu__item">Пілінги</li>
+                        <li class="menu__item">Мезотерапія</li>
+                        <li class="menu__item">Біоревіталізація</li>
+                        <li class="menu__item">Контурна пластика</li>
+                        <li class="menu__item">Ботулінотерапія</li>
+                        <li class="menu__item">Мезотерапія</li>
+                        <li class="menu__item">Біоревіталізація</li>
+                      </ul>
+                    </div>
+
+                    <div class="menu__wrapp">
+                      <h4 class="menu__title hidden">Косметологія</h4>
+                      <ul class="menu__list">
+                        <li class="menu__item">Чистка обличчя</li>
+                        <li class="menu__item">Пілінги</li>
+                        <li class="menu__item">Мезотерапія</li>
+                        <li class="menu__item">Біоревіталізація</li>
+                        <li class="menu__item">Контурна пластика</li>
+                        <li class="menu__item">Ботулінотерапія</li>
+                        <li class="menu__item">Мезотерапія</li>
+                        <li class="menu__item">Біоревіталізація</li>
+                      </ul>
+                    </div>
+                    <div class="menu__wrapp">
+                      <h4 class="menu__title">Косметологія</h4>
+                      <ul class="menu__list">
+                        <li class="menu__item">Чистка обличчя</li>
+                        <li class="menu__item">Пілінги</li>
+                        <li class="menu__item">Мезотерапія</li>
+                        <li class="menu__item">Біоревіталізація</li>
+                        <li class="menu__item">Контурна пластика</li>
+                        <li class="menu__item">Ботулінотерапія</li>
+                        <li class="menu__item">Мезотерапія</li>
+                        <li class="menu__item">Біоревіталізація</li>
+                        <li class="menu__item">Контурна пластика</li>
+                        <li class="menu__item">Ботулінотерапія</li>
+                      </ul>
+                    </div>
+
+                    <div class="menu__wrapp">
+                      <h4 class="menu__title">Косметологія</h4>
+                      <ul class="menu__list">
+                        <li class="menu__item">Чистка обличчя</li>
+                        <li class="menu__item">Пілінги</li>
+                        <li class="menu__item">Мезотерапія</li>
+                        <li class="menu__item">Біоревіталізація</li>
+                        <li class="menu__item">Контурна пластика</li>
+                        <li class="menu__item">Ботулінотерапія</li>
+                        <li class="menu__item">Мезотерапія</li>
+                        <li class="menu__item">Біоревіталізація</li>
+                        <li class="menu__item">Контурна пластика</li>
+                        <li class="menu__item">Ботулінотерапія</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav__item">
+                  <a href="" class="nav__link">Цiна</a>
+                </li>
+                <li class="nav__item">
+                  <a href="" class="nav__link">Вiдгуки</a>
+                </li>
+
+                <li class="nav__item accent">
+                  <a href="" class="nav__link accent">Акції</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="" class="nav__link">Лiкарі</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="" class="nav__link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="button__wrapper">
+              <div class="language__wrapper">
+                <div class="language__button">
+                  <input type="radio" id="UA" name="lang" value="UA" checked />
+                  <label for="UA">UA</label>
+                </div>
+
+                <span class="language__slash">/</span>
+                <div class="language__button">
+                  <input type="radio" id="RU" name="lang" value="RU" />
+                  <label for="RU">RU</label>
+                </div>
+              </div>
+
+              <a href="" class="button__search button-icon">
+                <svg>
+                  <use href="./symbol-defs.svg#icon-search"></use>
+                </svg>
+              </a>
+              <a href="" class="feedback__insta button-icon">
+                <svg>
+                  <use href="./symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+
+              <button type="button" class="button-text button__online">
+                онлайн запис
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="navmobile container">
+        <div class="navmobile__search">
+          <svg class="navmobile__search_icon">
+            <use href="./symbol-defs.svg#icon-search"></use>
           </svg>
-        </a>
+          <input
+            type="text"
+            value=""
+            placeholder="Пошук на сайті"
+            class="navmobile__search_input"
+          />
+        </div>
+        <nav class="navmobile__nav">
+          <ul class="navmobile__nav_list">
+            <li class="navmobile__nav_item">
+              <a href="/" class="navmobile__nav_link"> Про клініку</a>
+            </li>
+            <li class="navmobile__nav_item">
+              <a href="/" class="navmobile__nav_link">Цiна </a>
+            </li>
+            <li class="navmobile__nav_item">
+              <a href="/" class="navmobile__nav_link"> Вiдгуки</a>
+            </li>
+            <li class="navmobile__nav_item">
+              <a href="/" class="navmobile__nav_link">Акції </a>
+            </li>
+            <li class="navmobile__nav_item">
+              <a href="/" class="navmobile__nav_link"> Лiкарі</a>
+            </li>
+            <li class="navmobile__nav_item">
+              <a href="/" class="navmobile__nav_link">Контакти </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="navmobile__service">
+          <p class="navmobile__service_title">Послуги:</p>
+
+          <div class="navmobile__service_wrapp" id="menu">
+            <input
+              class="navmobile__service_checkbox"
+              type="checkbox"
+              name="cometic"
+              id="cometic"
+            />
+            <label class="navmobile__service_label" for="cometic">
+              Косметологія
+
+              <svg class="navmobile__service_icon">
+                <use href="./symbol-defs.svg#icon-arrow-fat"></use>
+              </svg>
+            </label>
+            <ul class="navmobile__service_list" id="list">
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link"> Консультація</a>
+              </li>
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link"
+                  >Видалення новоутворень</a
+                >
+              </li>
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link">Консультація</a>
+              </li>
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link"
+                  >Видалення новоутворень</a
+                >
+              </li>
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link">Консультація</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="navmobile__service_wrapp">
+            <input
+              class="navmobile__service_checkbox"
+              type="checkbox"
+              name="cometic-1"
+              id="cometic-1"
+            />
+            <label class="navmobile__service_label" for="cometic-1">
+              Косметологія
+
+              <svg class="navmobile__service_icon">
+                <use href="./symbol-defs.svg#icon-arrow-fat"></use>
+              </svg>
+            </label>
+            <ul class="navmobile__service_list">
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link"> Консультація</a>
+              </li>
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link"
+                  >Видалення новоутворень</a
+                >
+              </li>
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link">Консультація</a>
+              </li>
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link"
+                  >Видалення новоутворень</a
+                >
+              </li>
+              <li class="navmobile__service_item">
+                <a href="" class="navmobile__service_link">Консультація</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="navmobile__language">
+          <div class="language__wrapper">
+            <div class="language__button">
+              <input
+                type="radio"
+                id="UA-mob"
+                name="lang-mob"
+                value="UA"
+                checked
+              />
+              <label for="UA-mob">UA</label>
+            </div>
+
+            <div class="language__button">
+              <input type="radio" id="RU-mob" name="lang-mob" value="RU" />
+              <label for="RU-mob">RU</label>
+            </div>
+          </div>
+        </div>
 
         <div class="address__wrapper">
           <svg class="address__icon">
@@ -48,92 +353,8 @@
             Сб, Нд: 10.00 - 16.00. Пн, Чт: вихідний
           </p>
         </div>
-
-        <div class="tel__wrapper">
-          <img
-            src="./dev_copmonent/Rectangleuser.png"
-            alt="manager"
-            srcset=""
-            class="tel__manager"
-          />
-          <a href="tel:+380931097091" class="tel__link">+ 38 093 109 70 91</a>
-        </div>
       </div>
-
-      <div class="nav">
-        <div class="container">
-          <nav class="nav__nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="" class="nav__link">Про клініку</a>
-              </li>
-              <li class="nav__item">
-                <a href="" class="nav__link multi-link"
-                  >Послуги
-
-                  <svg class="nav__icon">
-                    <use href="./symbol-defs.svg#icon-arrow"></use>
-                  </svg>
-                </a>
-                <ul class="nav__sublist"></ul>
-              </li>
-              <li class="nav__item">
-                <a href="" class="nav__link">Цiна</a>
-              </li>
-              <li class="nav__item">
-                <a href="" class="nav__link">Вiдгуки</a>
-              </li>
-
-              <li class="nav__item accent">
-                <a href="" class="nav__link accent">Акції</a>
-              </li>
-
-              <li class="nav__item">
-                <a href="" class="nav__link">Лiкарі</a>
-              </li>
-
-              <li class="nav__item">
-                <a href="" class="nav__link">Контакти</a>
-              </li>
-            </ul>
-          </nav>
-
-          <svg class="nav__close">
-            <use href="./symbol-defs.svg#icon-close"></use>
-          </svg>
-
-          <div class="button__wrapper">
-            <div class="language__wrapper">
-              <div class="language__button">
-                <input type="radio" id="UA" name="lang" value="UA" checked />
-                <label for="UA">UA</label>
-              </div>
-
-              <span class="language__slash">/</span>
-              <div class="language__button">
-                <input type="radio" id="RU" name="lang" value="RU" />
-                <label for="RU">RU</label>
-              </div>
-            </div>
-
-            <a href="" class="button__search button-icon">
-              <svg>
-                <use href="./symbol-defs.svg#icon-search"></use>
-              </svg>
-            </a>
-            <a href="" class="feedback__insta button-icon">
-              <svg>
-                <use href="./symbol-defs.svg#icon-instagram"></use>
-              </svg>
-            </a>
-
-            <button type="button" class="button-text button__online">
-              онлайн запис
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+    </div>
 
     <div class="banner section">
       <div class="container">
@@ -169,10 +390,9 @@
               косметологічних методів очищення
             </p>
             <p class="banner__price">
-              3450
-              <span class="banner__price_currant">грн</span>
-              <span class="banner__price accent"> 3450 </span>
-              <span class="banner__price_currant accent">грн</span>
+              3450<span class="banner__price_currant">грн</span>
+              <span class="banner__price accent">3450</span
+              ><span class="banner__price_currant accent">грн</span>
             </p>
           </div>
 
@@ -791,62 +1011,62 @@
     <div class="footer section">
       <div class="container">
         <nav class="menu">
-          <div class="footer__nav_wrapp">
-            <h4 class="footer__nav_title">Косметологія</h4>
-            <ul class="footer__nav_list">
-              <li class="footer__nav_item">Чистка обличчя</li>
-              <li class="footer__nav_item">Пілінги</li>
-              <li class="footer__nav_item">Мезотерапія</li>
-              <li class="footer__nav_item">Біоревіталізація</li>
-              <li class="footer__nav_item">Контурна пластика</li>
-              <li class="footer__nav_item">Ботулінотерапія</li>
-              <li class="footer__nav_item">Мезотерапія</li>
-              <li class="footer__nav_item">Біоревіталізація</li>
+          <div class="menu__wrapp">
+            <h4 class="menu__title">Косметологія</h4>
+            <ul class="menu__list">
+              <li class="menu__item">Чистка обличчя</li>
+              <li class="menu__item">Пілінги</li>
+              <li class="menu__item">Мезотерапія</li>
+              <li class="menu__item">Біоревіталізація</li>
+              <li class="menu__item">Контурна пластика</li>
+              <li class="menu__item">Ботулінотерапія</li>
+              <li class="menu__item">Мезотерапія</li>
+              <li class="menu__item">Біоревіталізація</li>
             </ul>
           </div>
 
-          <div class="footer__nav_wrapp">
-            <h4 class="footer__nav_title hidden">Косметологія</h4>
-            <ul class="footer__nav_list">
-              <li class="footer__nav_item">Чистка обличчя</li>
-              <li class="footer__nav_item">Пілінги</li>
-              <li class="footer__nav_item">Мезотерапія</li>
-              <li class="footer__nav_item">Біоревіталізація</li>
-              <li class="footer__nav_item">Контурна пластика</li>
-              <li class="footer__nav_item">Ботулінотерапія</li>
-              <li class="footer__nav_item">Мезотерапія</li>
-              <li class="footer__nav_item">Біоревіталізація</li>
+          <div class="menu__wrapp">
+            <h4 class="menu__title hidden">Косметологія</h4>
+            <ul class="menu__list">
+              <li class="menu__item">Чистка обличчя</li>
+              <li class="menu__item">Пілінги</li>
+              <li class="menu__item">Мезотерапія</li>
+              <li class="menu__item">Біоревіталізація</li>
+              <li class="menu__item">Контурна пластика</li>
+              <li class="menu__item">Ботулінотерапія</li>
+              <li class="menu__item">Мезотерапія</li>
+              <li class="menu__item">Біоревіталізація</li>
             </ul>
           </div>
-          <div class="footer__nav_wrapp">
-            <h4 class="footer__nav_title">Косметологія</h4>
-            <ul class="footer__nav_list">
-              <li class="footer__nav_item">Чистка обличчя</li>
-              <li class="footer__nav_item">Пілінги</li>
-              <li class="footer__nav_item">Мезотерапія</li>
-              <li class="footer__nav_item">Біоревіталізація</li>
-              <li class="footer__nav_item">Контурна пластика</li>
-              <li class="footer__nav_item">Ботулінотерапія</li>
-              <li class="footer__nav_item">Мезотерапія</li>
-              <li class="footer__nav_item">Біоревіталізація</li>
-              <li class="footer__nav_item">Контурна пластика</li>
-              <li class="footer__nav_item">Ботулінотерапія</li>
+          <div class="menu__wrapp">
+            <h4 class="menu__title">Косметологія</h4>
+            <ul class="menu__list">
+              <li class="menu__item">Чистка обличчя</li>
+              <li class="menu__item">Пілінги</li>
+              <li class="menu__item">Мезотерапія</li>
+              <li class="menu__item">Біоревіталізація</li>
+              <li class="menu__item">Контурна пластика</li>
+              <li class="menu__item">Ботулінотерапія</li>
+              <li class="menu__item">Мезотерапія</li>
+              <li class="menu__item">Біоревіталізація</li>
+              <li class="menu__item">Контурна пластика</li>
+              <li class="menu__item">Ботулінотерапія</li>
             </ul>
           </div>
 
-          <div class="footer__nav_wrapp">
-            <h4 class="footer__nav_title">Косметологія</h4>
-            <ul class="footer__nav_list">
-              <li class="footer__nav_item">Чистка обличчя</li>
-              <li class="footer__nav_item">Пілінги</li>
-              <li class="footer__nav_item">Мезотерапія</li>
-              <li class="footer__nav_item">Біоревіталізація</li>
-              <li class="footer__nav_item">Контурна пластика</li>
-              <li class="footer__nav_item">Ботулінотерапія</li>
-              <li class="footer__nav_item">Мезотерапія</li>
-              <li class="footer__nav_item">Біоревіталізація</li>
-              <li class="footer__nav_item">Контурна пластика</li>
-              <li class="footer__nav_item">Ботулінотерапія</li>
+          <div class="menu__wrapp">
+            <h4 class="menu__title">Косметологія</h4>
+            <ul class="menu__list">
+              <li class="menu__item">Чистка обличчя</li>
+              <li class="menu__item">Пілінги</li>
+              <li class="menu__item">Мезотерапія</li>
+              <li class="menu__item">Біоревіталізація</li>
+              <li class="menu__item">Контурна пластика</li>
+              <li class="menu__item">Ботулінотерапія</li>
+              <li class="menu__item">Мезотерапія</li>
+              <li class="menu__item">Біоревіталізація</li>
+              <li class="menu__item">Контурна пластика</li>
+              <li class="menu__item">Ботулінотерапія</li>
             </ul>
           </div>
         </nav>
@@ -938,7 +1158,7 @@
       </div>
     </div>
 
-    <!-- <script src="js/modal.js"></script> -->
+    <script src="js/menu.js"></script>
     <!-- <script src="js/carusel.js"></script> -->
   </body>
 </html>

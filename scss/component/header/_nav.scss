@@ -2,8 +2,10 @@
   background-color: $dark-color;
 
   .container {
+    background-color: $dark-color;
     padding-top: 10px;
     padding-bottom: 10px;
+    position: relative;
   }
 
   &__nav {
@@ -34,10 +36,11 @@
 
   &__item {
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
-    z-index: 2;
+
+    &.multi-link:hover .nav__sublist.menu {
+      @include visible('flex');
+    }
+
     &.accent {
       overflow: visible;
     }
@@ -49,24 +52,9 @@
     &:last-child {
       margin-right: -12px;
     }
-
-    &:before {
-      content: '';
-      position: absolute;
-      inset: calc(100% - 1px) 0 0 0;
-      background: $semi-dark-color;
-      scale: 0 1;
-      transition: 0.3s, translate 0s 0.3s;
-    }
-
-    &:hover:before {
-      translate: 0;
-      transition: 0.3s;
-    }
   }
 
   &__link {
-    position: relative;
     @include font(15px, 600, $light-color, 109%);
     @include flex(space-between);
     padding-bottom: 5px;
@@ -78,10 +66,6 @@
     @include _1024-1100 {
       padding-left: 8px;
       padding-right: 8px;
-    }
-
-    &.multi-link:hover .nav__sublist {
-      @include visible('flex');
     }
 
     &.accent {
@@ -205,18 +189,89 @@
     }
   }
 
-  &__sublist {
+  &__sublist.menu {
+    padding-top: 36px;
+    padding-bottom: 50px;
+    padding-left: 17px;
+    @include hidden;
+    position: absolute;
+    max-width: 1284px;
+    left: 0;
+    right: 0;
+    top: 70px;
+    z-index: z('subtitle');
+    background-color: $semi-light-color;
+    border-radius: 0 0 77px 10px;
   }
 
   &__close {
-    width: 26px;
-    height: 22px;
-    stroke: $light-color;
-    fill: $accent-color;
+    @include button(false);
+    // stroke: $light-color;
+    // fill: $accent-color;
     @include visible;
 
     @include _1024 {
       @include hidden;
+    }
+
+    &_burger {
+      position: relative;
+      width: 26px;
+      height: 22px;
+      background: transparent;
+      cursor: pointer;
+      display: block;
+    }
+
+    input {
+      display: none;
+
+      &:checked ~ span:nth-of-type(1) {
+        transform: rotate(36deg);
+        top: 1px;
+        left: 0px;
+      }
+
+      &:checked ~ span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+      }
+
+      &:checked ~ span:nth-of-type(3) {
+        transform: rotate(-38deg);
+        top: 17px;
+        left: 0px;
+      }
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $light-color;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+      &:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+
+      &:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+      }
+
+      &:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-100%);
+      }
     }
   }
 
@@ -229,40 +284,6 @@
 
     @include _1024-1100 {
       margin-left: 6px;
-    }
-  }
-
-  .language {
-    &__wrapper {
-      @include flex(space-between);
-      @include font(15px, 600, $semi-medium-color, 109%);
-      margin-right: 20px;
-      @include hidden;
-
-      @include _1024 {
-        @include visible('flex');
-      }
-    }
-    &__button {
-      padding-left: 2px;
-      padding-right: 2px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      @include font(15px, 600, $semi-dark-color, 109%);
-      cursor: pointer;
-
-      input {
-        @include hidden;
-      }
-
-      input:checked ~ label {
-        color: $semi-medium-color;
-      }
-    }
-    &__slash {
-      padding-left: 2px;
-      padding-right: 2px;
-      color: $semi-dark-color;
     }
   }
 
@@ -300,7 +321,222 @@
       @include _1024 {
         margin-left: 10px;
         width: 172px;
+        font-size: 14px;
       }
     }
   }
+}
+
+.language {
+  &__wrapper {
+    @include flex(space-between);
+    @include font(15px, 600, $semi-medium-color, 109%);
+    margin-right: 20px;
+    @include hidden;
+
+    @include _1024 {
+      @include visible('flex');
+    }
+  }
+  &__button {
+    padding-left: 2px;
+    padding-right: 2px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    @include font(15px, 600, $semi-dark-color, 109%);
+    cursor: pointer;
+
+    input {
+      @include hidden;
+    }
+
+    input:checked ~ label {
+      color: $semi-medium-color;
+    }
+  }
+  &__slash {
+    padding-left: 2px;
+    padding-right: 2px;
+    color: $semi-dark-color;
+  }
+}
+
+.navmobile {
+  display: block;
+  opacity: 1;
+  transition: all 2s linear;
+
+  @include _1024 {
+    display: none;
+    opacity: 0;
+  }
+
+  &__container {
+    z-index: z('mobile-menu');
+  }
+  &.container {
+    background-color: $semi-light-color;
+    z-index: -1;
+    display: none;
+    transform: translateY(-200%);
+    padding-bottom: 50px;
+    padding-top: 30px;
+    transition: all 2s linear;
+
+    .mobile-menu-open & {
+      @include flex(center, flex-start);
+      flex-direction: column;
+      transform: translateY(0);
+      transition: all 2s linear 0.3s;
+    }
+  }
+
+  &__search {
+    position: relative;
+    margin-bottom: 30px;
+    &_icon {
+      height: 22px;
+      width: 22px;
+      stroke: $semi-dark-color;
+      fill: none;
+      position: absolute;
+      left: 12px;
+      @include сentering-y;
+    }
+    &_input {
+      height: 39px;
+      width: 100%;
+      border-radius: 100px;
+      padding: 17px 19px;
+      background-color: $semi-medium-color;
+      border: none;
+      padding-left: 45px;
+
+      &::placeholder {
+        @include font(12px, 400, $medium-color, 112%);
+      }
+    }
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+
+    &_item {
+      margin-bottom: 17px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_link {
+      @include font(14px, 700, $dark-color, 112%);
+      text-transform: uppercase;
+    }
+  }
+
+  &__service {
+    &_wrapp {
+      &:hover .navmobile__service_list {
+        max-height: 1000px;
+        transition: all 1s ease-in;
+        margin-top: 30px;
+        padding-bottom: 10px;
+      }
+
+      &:hover .navmobile__service_label > .navmobile__service_icon {
+        transform: rotate(90deg);
+        transition: all 1s ease-in;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &_title {
+      @include font(13px, 400, $medium-color, 121%);
+      margin-bottom: 20px;
+    }
+
+    &_label {
+      @include font(18px, 700, $dark-color, 112%);
+      text-transform: uppercase;
+      @include flex(flex-start);
+    }
+
+    &_icon {
+      width: 9px;
+      height: 14px;
+      stroke: $semi-dark-color;
+      margin-left: 8px;
+
+      transition: all 1s ease-in 1s;
+    }
+
+    &_checkbox {
+      visibility: hidden;
+      display: none;
+    }
+
+    &_list {
+      overflow: hidden;
+      max-height: 0;
+      transition: all 1s ease-in 1s;
+    }
+
+    &_link {
+      @include font(15px, 600, $dark-color, 140%);
+      padding: 5px 0;
+      display: block;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__language {
+    .language__wrapper {
+      @include visible(flex);
+      margin-right: 0;
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      .language__button:first-child {
+        margin-right: 26px;
+      }
+
+      .language__button input ~ label {
+        color: $medium-color;
+      }
+
+      .language__button input:checked ~ label {
+        color: $semi-dark-color;
+      }
+    }
+  }
+
+  & .address__wrapper {
+    @include visible(flex);
+    margin-bottom: 20px;
+  }
+
+  & .schedule__wrapper {
+    @include visible(flex);
+  }
+}
+
+.mobile-response {
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-menu-open {
+  position: fixed;
+  top: 0;
+  z-index: z('mobile-menu');
+  left: 0;
+  right: 0;
+  overflow: auto;
+  bottom: 0;
+  background-color: $semi-light-color;
 }
