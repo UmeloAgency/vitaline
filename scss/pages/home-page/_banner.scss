@@ -15,9 +15,14 @@
   &__wrapper {
     position: relative;
 
+    @include _768 {
+      @include flex(space-between);
+      flex-wrap: wrap;
+    }
+
     @include _1024 {
       @include flex(flex-start, flex-start, column);
-      flex-wrap: wrap;
+
       height: 415px;
       padding-bottom: 4px;
     }
@@ -29,8 +34,10 @@
   }
   &__image {
     border-radius: 25px 8px 8px 8px;
-    height: 221px;
-    width: 275px;
+    min-height: 221px;
+    min-width: 275px;
+    width: 62%;
+    height: auto;
     margin-bottom: 23px;
     position: relative;
 
@@ -43,12 +50,19 @@
       background: linear-gradient(rgba(226, 107, 135, 0) 0%, #de6682 100%);
     }
 
+    @include _768 {
+      order: 2;
+      width: 50%;
+      margin-bottom: 0;
+      @include flex();
+      align-self: flex-start;
+    }
+
     @include _1024 {
       order: 4;
-
+      align-self: auto;
       width: 500px;
       height: auto;
-      margin-bottom: 0;
 
       &::before {
         height: 88px;
@@ -63,12 +77,21 @@
 
   &__textblock {
     margin-bottom: 34px;
-    max-width: 243px;
+    min-width: 243px;
+    width: 62%;
+
+    @include _768 {
+      width: 50%;
+      max-width: 243px;
+      order: 1;
+      padding-top: 40px;
+    }
 
     @include _1024 {
       max-width: 465px;
       order: 1;
       margin-bottom: 20px;
+      padding-top: 0;
     }
 
     @include _1248 {
@@ -156,6 +179,11 @@
   &__buttonblock {
     @include flex(space-between);
     max-width: 400px;
+
+    @include _768 {
+      order: 3;
+      max-width: 50%;
+    }
 
     @include _1024 {
       order: 2;
@@ -261,10 +289,15 @@
     bottom: 75px;
     right: 0px;
 
-    @include _1024 {
-      order: 3;
+    @include _768 {
+      order: 4;
       position: static;
       @include flex();
+      width: 50%;
+    }
+
+    @include _1024 {
+      order: 3;
       width: auto;
     }
   }
@@ -276,8 +309,11 @@
       color: $semi-medium-color;
     }
 
-    @include _1024 {
+    @include _768 {
       order: 3;
+    }
+
+    @include _1024 {
       &_active {
         margin-right: 8px;
       }
@@ -291,9 +327,13 @@
     @include flex(space-between);
     margin-top: 24px;
 
-    @include _1024 {
+    @include _768 {
       order: 1;
       margin-top: 0;
+      margin-right: 10px;
+    }
+
+    @include _1024 {
       margin-right: 24px;
     }
   }
@@ -328,9 +368,14 @@
     @include flex();
     margin-right: 28px;
 
-    @include _1024 {
+    @include _768 {
       @include visible('flex');
       order: 2;
+      margin-right: 10px;
+    }
+
+    @include _1024 {
+      margin-right: 28px;
     }
   }
   &__dot {
