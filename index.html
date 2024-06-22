@@ -609,7 +609,7 @@
         <h3 class="doctors__title title">НАШІ ЛІКАРІ</h3>
 
         <div class="carusel">
-          <div class="carusel__wrapper">
+          <div class="carusel__wrapper" id="slider-doc">
             <div class="card__wrapper">
               <div class="card__inner">
                 <div class="doctorcard__content card">
@@ -779,12 +779,20 @@
 
         <div class="carusel__buttonblock">
           <div class="carusel__controllers">
-            <button type="button" class="carusel__btn left button-icon">
+            <button
+              type="button"
+              class="carusel__btn left button-icon"
+              id="slider-left-doc"
+            >
               <svg class="carusel__icon">
                 <use href="./symbol-defs.svg#icon-arrowUpRight"></use>
               </svg>
             </button>
-            <button type="button" class="carusel__btn right button-icon">
+            <button
+              type="button"
+              class="carusel__btn right button-icon"
+              id="slider-right-doc"
+            >
               <svg class="carusel__icon">
                 <use href="./symbol-defs.svg#icon-arrowUpRight"></use>
               </svg>
@@ -802,7 +810,7 @@
       <div class="reviews container">
         <h3 class="title reviews__title">ВІДГУКИ та наша Відповідальність</h3>
         <div class="carusel">
-          <div class="carusel__wrapper">
+          <div class="carusel__wrapper" id="slider-reviews">
             <div class="card__wrapper">
               <div class="card__inner">
                 <div class="reviews__card card">
@@ -966,12 +974,20 @@
         <div class="carusel__buttonwrapper">
           <div class="carusel__buttonblock">
             <div class="carusel__controllers">
-              <button type="button" class="carusel__btn left button-icon">
+              <button
+                type="button"
+                class="carusel__btn left button-icon"
+                id="slider-left-reviews"
+              >
                 <svg class="carusel__icon">
                   <use href="./symbol-defs.svg#icon-arrowUpRight"></use>
                 </svg>
               </button>
-              <button type="button" class="carusel__btn right button-icon">
+              <button
+                type="button"
+                class="carusel__btn right button-icon"
+                id="slider-right-reviews"
+              >
                 <svg class="carusel__icon">
                   <use href="./symbol-defs.svg#icon-arrowUpRight"></use>
                 </svg>
@@ -995,13 +1011,40 @@
       <div class="container">
         <h3 class="title portfolio__title">фотогалерея</h3>
         <p class="portfolio__subtitle">Ми даємо гарантований результат</p>
-        <div class="portfolio__wrapper">
+
+        <div class="portfolio__animation">
           <img
             src="./dev_copmonent/portfolio.png"
             alt=""
             class="portfolio__photo"
           />
         </div>
+        <!-- <div class="portfolio__wrapper">
+          <div class="portfolio__cardblock">
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="card">
+                  <img
+                    src="./dev_copmonent/portfoliomini.png"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="card">
+                  <img
+                    src="./dev_copmonent/portfoliomini.png"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
 
         <div class="carusel__buttonwrapper">
           <div class="carusel__buttonblock">
@@ -1184,6 +1227,6 @@
     </div>
 
     <script src="js/menu.js"></script>
-    <!-- <script src="js/carusel.js"></script> -->
+    <script src="js/carusel.js"></script>
   </body>
 </html>

@@ -1,54 +1,64 @@
-// Элементы на странице
-const slider = document.getElementById('slider');
-const sliderItems = Array.from(slider.children);
-const btnNext = document.getElementById('slide-right');
-const btnPrev = document.getElementById('slide-left');
+// // ДОКТОР
+const docSlider = document.getElementById('slider-doc');
+const docBtnNext = document.getElementById('slider-right-doc');
+const docBtnPrev = document.getElementById('slider-left-doc');
 
-sliderItems.forEach(function (slide, index) {
-  // Скрываем все слайды, кроме первого
-  // if (index !== 0) slide.classList.add('hidden');
+initCarusel(docSlider, docBtnNext, docBtnPrev);
 
-  // Добавляем индексы
-  slide.dataset.index = index;
+// ОТЗЫВЫ
+const reviewsSlider = document.getElementById('slider-reviews');
+const reviewsBtnNext = document.getElementById('slider-right-reviews');
+const reviewsBtnPrev = document.getElementById('slider-left-reviews');
 
-  // Добавляем data атрибут active для первого / активного слайда
-  sliderItems[0].setAttribute('data-active', '');
+initCarusel(reviewsSlider, reviewsBtnNext, reviewsBtnPrev);
 
-  // Клик по слайдам
-  slide.addEventListener('click', function () {
-    showNextSlide('next');
+//  ФУНКЦИИ
+
+function initCarusel(slider, btnNext, btnPrev) {
+  const sliderItems = Array.from(slider.children);
+
+  sliderItems.forEach(function (slide, index) {
+    slide.dataset.index = index;
+    sliderItems[0].setAttribute('data-active', '');
   });
-});
 
-btnNext.onclick = function () {
-  console.log('Next Slide');
-  showNextSlide('next');
-};
+  btnNext.onclick = function () {
+    showNextSlide('next', slider, sliderItems);
+  };
 
-btnPrev.onclick = function () {
-  console.log('Prev Slide');
-  showNextSlide('prev');
-};
+  btnPrev.onclick = function () {
+    showNextSlide('prev', slider, sliderItems);
+  };
+}
 
-function showNextSlide(direction) {
-  // Скрываем текущий слайд
+function showNextSlide(direction, slider, sliderItems) {
+  const styleSlider = getComputedStyle(slider);
+  const styleItem = getComputedStyle(sliderItems[0]);
+  const itemWidth = +sliderItems[0].clientWidth;
+  const itemMarginRight = +styleItem.marginRight.slice(0, -2);
+
   const currentSlide = slider.querySelector('[data-active]');
   const currentSlideIndex = +currentSlide.dataset.index;
-  currentSlide.classList.add('hidden');
+  const currentStep = new WebKitCSSMatrix(styleSlider.transform).m41;
+  const step = itemWidth + itemMarginRight;
+  let nextSlideIndex;
+
+  if (direction === 'prev' && currentSlideIndex === 0) return;
+
   currentSlide.removeAttribute('data-active');
 
-  // Рассчитываем след индекс в зависимости от направления движения
-  let nextSlideIndex;
   if (direction === 'next') {
     nextSlideIndex =
       currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
-  } else if (direction === 'prev') {
-    nextSlideIndex =
-      currentSlideIndex === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
+    slider.style.transform = `translateX(-${step * nextSlideIndex}px)`;
   }
 
-  // Показываем след слайд
+  if (direction === 'prev') {
+    nextSlideIndex =
+      currentSlideIndex === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
+    slider.style.transform = `translateX(${currentStep + step}px)`;
+  }
+
   const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
-  nextSlide.classList.remove('hidden');
   nextSlide.setAttribute('data-active', '');
 }
