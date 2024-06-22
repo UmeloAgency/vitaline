@@ -36,7 +36,7 @@
     border-radius: 25px 8px 8px 8px;
     min-height: 221px;
     min-width: 275px;
-    width: 62%;
+    width: 78%;
     height: auto;
     margin-bottom: 23px;
     position: relative;
@@ -78,7 +78,7 @@
   &__textblock {
     margin-bottom: 34px;
     min-width: 243px;
-    width: 62%;
+    width: 78%;
 
     @include _768 {
       width: 50%;
@@ -105,7 +105,6 @@
     text-transform: uppercase;
 
     &.accent {
-      display: block;
       margin-bottom: 0;
       margin-top: 0;
       @include font(21px, 600, $semi-accent-color, 112%, $second-font);
@@ -178,7 +177,6 @@
 
   &__buttonblock {
     @include flex(space-between);
-    max-width: 400px;
 
     @include _768 {
       order: 3;

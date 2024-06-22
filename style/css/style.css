@@ -551,8 +551,14 @@ body {
   display: flex;
   visibility: visible;
 }
+.nav__item.multi-link:hover .nav__icon {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-out;
+}
 .nav__item.accent {
   overflow: visible;
+  height: -moz-min-content;
+  height: min-content;
 }
 .nav__item:first-child {
   margin-left: -12px;
@@ -606,6 +612,7 @@ body {
   background-repeat: no-repeat;
 }
 .nav__link.accent:hover:before {
+  z-index: 1;
   top: -70%;
   background-image: radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, transparent 20%, #de6682 20%, transparent 30%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, transparent 10%, #de6682 15%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%);
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
@@ -625,6 +632,7 @@ body {
   }
 }
 .nav__link.accent:hover::after {
+  z-index: 1;
   bottom: -70%;
   background-image: radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, transparent 10%, #de6682 15%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%), radial-gradient(circle, #de6682 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
@@ -643,7 +651,7 @@ body {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-.nav__link:hover {
+.nav__link:not(.accent):hover {
   color: #f6cea9;
 }
 .nav__sublist.menu {
@@ -736,6 +744,7 @@ body {
   stroke: #ea91a5;
   fill: none;
   margin-left: 13px;
+  transition: all 0.2s ease-out;
 }
 @media (min-width: 1024px) and (max-width: 1100px) {
   .nav__icon {
@@ -818,6 +827,8 @@ body {
   font-weight: 600;
   line-height: 109%;
   color: #de6682;
+}
+.language__button * {
   cursor: pointer;
 }
 .language__button input {
@@ -1509,7 +1520,7 @@ body {
   border-radius: 25px 8px 8px 8px;
   min-height: 221px;
   min-width: 275px;
-  width: 62%;
+  width: 78%;
   height: auto;
   margin-bottom: 23px;
   position: relative;
@@ -1558,7 +1569,7 @@ body {
 .banner__textblock {
   margin-bottom: 34px;
   min-width: 243px;
-  width: 62%;
+  width: 78%;
 }
 @media (min-width: 768px) {
   .banner__textblock {
@@ -1592,7 +1603,6 @@ body {
   text-transform: uppercase;
 }
 .banner__title.accent {
-  display: block;
   margin-bottom: 0;
   margin-top: 0;
   font-family: "Montserrat", sans-serif;
@@ -1693,7 +1703,6 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  max-width: 400px;
 }
 @media (min-width: 768px) {
   .banner__buttonblock {

@@ -44,8 +44,14 @@
       @include visible('flex');
     }
 
+    &.multi-link:hover .nav__icon {
+      transform: rotate(180deg);
+      transition: all 0.2s ease-out;
+    }
+
     &.accent {
       overflow: visible;
+      height: min-content;
     }
 
     &:first-child {
@@ -97,6 +103,7 @@
       }
 
       &:hover:before {
+        z-index: 1;
         top: -70%;
         background-image: radial-gradient(
             circle,
@@ -146,6 +153,7 @@
       }
 
       &:hover::after {
+        z-index: 1;
         bottom: -70%;
         background-image: radial-gradient(
             circle,
@@ -188,7 +196,7 @@
       }
     }
 
-    &:hover {
+    &:not(.accent):hover {
       color: $semi-accent-color;
     }
   }
@@ -289,6 +297,7 @@
     stroke: $medium-color;
     fill: none;
     margin-left: 13px;
+    transition: all 0.2s ease-out;
 
     @include _1024-1100 {
       margin-left: 6px;
@@ -354,7 +363,10 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     @include font(15px, 600, $semi-dark-color, 109%);
-    cursor: pointer;
+
+    * {
+      cursor: pointer;
+    }
 
     input {
       @include hidden;
