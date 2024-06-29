@@ -5,14 +5,21 @@ const docBtnPrev = document.getElementById('slider-left-doc');
 
 initCarusel(docSlider, docBtnNext, docBtnPrev);
 
-// ОТЗЫВЫ
+// ОТЗИВИ
 const reviewsSlider = document.getElementById('slider-reviews');
 const reviewsBtnNext = document.getElementById('slider-right-reviews');
 const reviewsBtnPrev = document.getElementById('slider-left-reviews');
 
 initCarusel(reviewsSlider, reviewsBtnNext, reviewsBtnPrev);
 
-//  ФУНКЦИИ
+// ПОРТФОЛІО
+const portfolioSlider = document.getElementById('slider-portfolio');
+const portfolioBtnNext = document.getElementById('slider-right-portfolio');
+const portfolioBtnPrev = document.getElementById('slider-left-portfolio');
+
+initCarusel(portfolioSlider, portfolioBtnNext, portfolioBtnPrev);
+
+//  ФУНКЦИЇ
 
 function initCarusel(slider, btnNext, btnPrev) {
   const sliderItems = Array.from(slider.children);

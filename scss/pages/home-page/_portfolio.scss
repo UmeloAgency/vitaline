@@ -3,6 +3,12 @@
     background-color: $semi-dark-color;
   }
 
+  &__wrapp {
+    @include _1024 {
+      display: flex;
+    }
+  }
+
   &__title {
     margin-bottom: 14px;
     color: $light-color;
@@ -17,13 +23,77 @@
       font-weight: 700;
     }
   }
-  &__wrapper {
-    margin-bottom: 25px;
-  }
-  &__image {
+  &__animation {
+    flex-shrink: 0;
     border-radius: 5px 25px 5px 5px;
     max-width: 306px;
     height: 264px;
+
+    @include _1024 {
+      max-width: 528px;
+      width: 528px;
+      height: 455px;
+      margin-right: 16px;
+      width: 47%;
+    }
+  }
+
+  &__photo {
+  }
+
+  &__image:first-child {
+    margin-bottom: 8px;
+    border-radius: 5px 25px 5px 5px;
+  }
+
+  &__card {
+    border-radius: 5px 25px 5px 5px;
+
+    @include _1024 {
+      border-radius: 10px 36px 10px 10px;
+    }
+  }
+
+  .carusel {
+    margin-top: 8px;
+    @include retinacontainer-width(100%);
+
+    @include _1024 {
+      margin-top: 0;
+    }
+
+    &__wrapper {
+      width: 100%;
+      margin-right: -8px;
+      @include retinacontainer-content;
+    }
+  }
+  &__subcaruselwrapp {
+    @include retinacontainer-height(78.4%);
+    margin-bottom: 25px;
+
+    @include _1024 {
+      margin-bottom: 0;
+    }
+  }
+
+  .card {
+    background-color: transparent;
+
+    &__wrapper {
+      @include retinacontainer-width(calc((100% - 8px) / 2));
+
+      &:not(:last-child) {
+        margin-right: 8px;
+
+        @include _1024 {
+          margin-right: 16px;
+        }
+      }
+    }
+    &__inner {
+      @include retinacontainer-height(161%);
+    }
   }
 
   .carusel__accentbtn {
