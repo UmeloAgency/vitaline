@@ -10,18 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Raleway:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+
     <link rel="stylesheet" href="./style/css/style.min.css" />
   </head>
   <body>
     <div class="navmobile__container" data-menu>
-      <header class="header section">
+      <header class="header">
         <div class="container">
           <a href="/index.html" class="logo__link">
             <svg class="logo__icon">
@@ -423,13 +417,15 @@
 
           <div class="banner__buttonblock">
             <button type="button" class="button-text banner__button register">
-              Записатися на прийом
+              <span>Записатися на прийом</span>
             </button>
             <button type="button" class="button-text banner__button detail">
               Детальніше
-              <svg class="banner__button_icon">
-                <use href="./symbol-defs.svg#icon-longArrow"></use>
-              </svg>
+              <span>
+                <svg class="banner__button_icon">
+                  <use href="./symbol-defs.svg#icon-arrow"></use>
+                </svg>
+              </span>
             </button>
           </div>
 
@@ -495,7 +491,7 @@
       <img src="./dev_copmonent/about.png" alt="" class="about__image" />
 
       <button type="button" class="button-text about__button">
-        Детальніше
+        <span class="about__button_text"> Детальніше</span>
       </button>
     </div>
 
@@ -608,7 +604,7 @@
       <div class="doctors container">
         <h3 class="doctors__title title">НАШІ ЛІКАРІ</h3>
 
-        <div class="carusel">
+        <div class="carusel doctors__carusel">
           <div class="carusel__wrapper" id="slider-doc">
             <div class="card__wrapper">
               <div class="card__inner">
@@ -634,51 +630,10 @@
                     </div>
                     <div class="doctorcard__buttonblock">
                       <button class="button-text doctorcard__button">
-                        Записатись
+                        <span> Записатись</span>
                       </button>
                       <button class="button-text doctorcard__button">
-                        Детальніше
-                      </button>
-                    </div>
-                  </div>
-
-                  <button type="button" class="doctorcard__like">
-                    <svg class="doctorcard__like_icon">
-                      <use href="./symbol-defs.svg#icon-heart"></use>
-                    </svg>
-                    <p class="doctorcard__like_text">1000</p>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="card__wrapper">
-              <div class="card__inner">
-                <div class="doctorcard__content card">
-                  <img
-                    src="./dev_copmonent/doctor.png"
-                    alt=""
-                    srcset=""
-                    class="doctorcard__photo"
-                  />
-                  <div class="doctorcard__block">
-                    <div class="doctorcard__text">
-                      <p class="doctorcard__title">МАСАЖИСТ</p>
-                      <h4 class="doctorcard__name">
-                        Зеленський Олександр Михайлович
-                      </h4>
-                      <h5 class="doctorcard__position">
-                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
-                      </h5>
-                      <a href="/" class="doctorcard__link"
-                        >Вiдгуки по фахівцю</a
-                      >
-                    </div>
-                    <div class="doctorcard__buttonblock">
-                      <button class="button-text doctorcard__button">
-                        Записатись
-                      </button>
-                      <button class="button-text doctorcard__button">
-                        Детальніше
+                        <span> Детальніше</span>
                       </button>
                     </div>
                   </div>
@@ -716,10 +671,10 @@
                     </div>
                     <div class="doctorcard__buttonblock">
                       <button class="button-text doctorcard__button">
-                        Записатись
+                        <span> Записатись</span>
                       </button>
                       <button class="button-text doctorcard__button">
-                        Детальніше
+                        <span> Детальніше</span>
                       </button>
                     </div>
                   </div>
@@ -757,10 +712,218 @@
                     </div>
                     <div class="doctorcard__buttonblock">
                       <button class="button-text doctorcard__button">
-                        Записатись
+                        <span> Записатись</span>
                       </button>
                       <button class="button-text doctorcard__button">
-                        Детальніше
+                        <span> Детальніше</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="./symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="./dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        <span> Записатись</span>
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        <span> Детальніше</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="./symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="./dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        <span> Записатись</span>
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        <span> Детальніше</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="./symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="./dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        <span> Записатись</span>
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        <span> Детальніше</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="./symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="./dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        <span> Записатись</span>
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        <span> Детальніше</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button type="button" class="doctorcard__like">
+                    <svg class="doctorcard__like_icon">
+                      <use href="./symbol-defs.svg#icon-heart"></use>
+                    </svg>
+                    <p class="doctorcard__like_text">1000</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="doctorcard__content card">
+                  <img
+                    src="./dev_copmonent/doctor.png"
+                    alt=""
+                    srcset=""
+                    class="doctorcard__photo"
+                  />
+                  <div class="doctorcard__block">
+                    <div class="doctorcard__text">
+                      <p class="doctorcard__title">МАСАЖИСТ</p>
+                      <h4 class="doctorcard__name">
+                        Зеленський Олександр Михайлович
+                      </h4>
+                      <h5 class="doctorcard__position">
+                        Спеціалізація — Ручний масаж, LPG масаж, корекція фігури
+                      </h5>
+                      <a href="/" class="doctorcard__link"
+                        >Вiдгуки по фахівцю</a
+                      >
+                    </div>
+                    <div class="doctorcard__buttonblock">
+                      <button class="button-text doctorcard__button">
+                        <span> Записатись</span>
+                      </button>
+                      <button class="button-text doctorcard__button">
+                        <span> Детальніше</span>
                       </button>
                     </div>
                   </div>
@@ -798,9 +961,9 @@
               </svg>
             </button>
           </div>
-          <a href="/" class="carusel__linkAll button-text"
-            >Дивитись усіх лікарів</a
-          >
+          <button class="button-text carusel__linkAll">
+            <a href="/" class="carusel__linkAll_text">Дивитись усіх лікарів</a>
+          </button>
         </div>
         <span class="sectionarrowdown light"></span>
       </div>
@@ -993,17 +1156,19 @@
                 </svg>
               </button>
             </div>
-            <a href="/" class="carusel__linkAll button-text"
-              >Дивитись усіх лікарів</a
-            >
+            <button class="button-text carusel__linkAll">
+              <a href="/" class="carusel__linkAll_text"
+                >Дивитись усіх лікарів</a
+              >
+            </button>
           </div>
-          <button type="button" class="carusel__accentbtn">
-            <svg class="carusel__accentbtn_icon">
-              <use href="./symbol-defs.svg#icon-check-heart"></use>
-            </svg>
-            Залишити відгук
-          </button>
         </div>
+        <button type="button" class="carusel__accentbtn">
+          <svg class="carusel__accentbtn_icon">
+            <use href="./symbol-defs.svg#icon-check-heart"></use>
+          </svg>
+          <span> Залишити відгук</span>
+        </button>
       </div>
     </div>
 
@@ -1014,11 +1179,18 @@
 
         <div class="portfolio__wrapp">
           <div class="portfolio__animation">
-            <img
-              src="./dev_copmonent/portfolio.png"
-              alt=""
-              class="portfolio__photo"
-            />
+            <div class="before_after_image_slide">
+              <img
+                src="./dev_copmonent/portfolio.png"
+                alt=""
+                class="portfolio__photo"
+              />
+              <img
+                src="./dev_copmonent/portpholiomini.png"
+                alt=""
+                class="portfolio__photo"
+              />
+            </div>
           </div>
           <div class="carusel">
             <div class="portfolio__subcaruselwrapp">
@@ -1124,15 +1296,15 @@
                 </svg>
               </button>
             </div>
-            <a href="/" class="carusel__linkAll button-text"
-              >Дивитись всі фото</a
-            >
+            <button class="button-text carusel__linkAll">
+              <a href="/" class="carusel__linkAll_text">Дивитись всі фото</a>
+            </button>
           </div>
           <button type="button" class="carusel__accentbtn">
             <svg class="carusel__accentbtn_icon">
               <use href="./symbol-defs.svg#icon-check"></use>
             </svg>
-            Хочу такий результат
+            <span> Хочу такий результат</span>
           </button>
         </div>
 
@@ -1291,6 +1463,28 @@
     </div>
 
     <script src="js/menu.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/beforeafter.js"></script>
+    <script src="js/slick.js"></script>
     <script src="js/carusel.js"></script>
+
+    <script type="text/javascript">
+      $('.before_after_image_slide').beforeAfter({
+        movable: true,
+        clickMove: true,
+        position: 50,
+        separatorColor: '#fafafa',
+        bulletColor: '#fafafa',
+        onMoveStart: function (e) {
+          // console.log(event.target);
+        },
+        onMoving: function () {
+          // console.log(event.target);
+        },
+        onMoveEnd: function () {
+          // console.log(event.target);
+        },
+      });
+    </script>
   </body>
 </html>

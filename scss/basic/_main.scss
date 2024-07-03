@@ -12,6 +12,7 @@ body {
   padding-right: 7.5%;
   padding-top: 50px;
   padding-bottom: 50px;
+
   position: relative;
 
   @include _u340 {
@@ -23,6 +24,12 @@ body {
     width: auto;
     padding-left: 12%;
     padding-right: 12%;
+  }
+
+  @include _768 {
+    width: 768px;
+    padding-left: 56px;
+    padding-right: 56px;
   }
 
   @include _1024 {

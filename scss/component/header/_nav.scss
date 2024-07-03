@@ -336,6 +336,15 @@
       margin-left: 17px;
       width: 118px;
       font-size: 10px;
+      background-size: 100% auto;
+      text-transform: uppercase;
+
+      &:hover {
+        background-position: right center;
+        background-size: 200% auto;
+        -webkit-animation: pulse 2s infinite;
+        animation: pulse512 1.5s infinite;
+      }
 
       @include _1024 {
         margin-left: 10px;
@@ -343,6 +352,20 @@
         font-size: 14px;
       }
     }
+  }
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 $medium-color;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
   }
 }
 

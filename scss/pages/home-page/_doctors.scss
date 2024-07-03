@@ -1,10 +1,10 @@
 .doctors {
   &.section {
     background-color: $semi-medium-color;
+    overflow: hidden;
   }
 
   &.container {
-    padding-right: 0;
     padding-bottom: 20px !important;
 
     @include _1024 {
@@ -23,16 +23,26 @@
     }
   }
 
-  .carusel {
+  &__carusel {
+    position: relative;
     margin-bottom: 25px;
     height: 500px;
+    overflow: visible;
 
     @include _1024 {
+      overflow: hidden;
       order: 3;
       margin-bottom: 0;
       height: 600px;
     }
   }
+
+  // .carusel {
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   bottom: 0;
+  // }
 
   .card__wrapper {
     margin-right: 8px;
@@ -43,11 +53,6 @@
   }
 
   .carusel__buttonblock {
-    @extend .container;
-    padding-left: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-
     @include _1024 {
       margin-bottom: 42px;
       order: 2;

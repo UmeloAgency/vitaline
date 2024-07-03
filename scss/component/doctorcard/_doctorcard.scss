@@ -85,6 +85,10 @@
     display: block;
     margin-left: 20px;
 
+    &:hover {
+      color: $dark-color;
+    }
+
     @include _1024 {
       font-size: 14px;
       margin-left: 28px;
@@ -111,13 +115,30 @@
     }
   }
   &__button {
-    @include font(13px, 600, $light-color, 112%);
     width: calc((100% - 15px) / 2);
-    text-transform: none;
+    span {
+      position: relative;
+      z-index: 2;
+      transition: color 0.4s;
+      @include font(13px, 600, $light-color, 112%);
+    }
+
+    &:first-child {
+      background-color: $semi-accent-color;
+      position: relative;
+      overflow: hidden;
+
+      &:hover span {
+        color: $dark-color;
+      }
+
+      @include animation-bg-left-to-right($accent-color);
+    }
 
     &:last-child {
-      background-color: $dark-color;
-      color: $light-color;
+      background-color: $semi-medium-color;
+
+      @include animation-bg-left-to-right($dark-color);
     }
 
     @include _1024 {
@@ -137,7 +158,12 @@
       height: 24px;
       width: 24px;
       stroke: $semi-dark-color;
+      fill: none;
       margin-bottom: 2px;
+    }
+
+    &:active &_icon {
+      fill: $semi-dark-color;
     }
     &_text {
       @include font(14px, 400, $semi-dark-color, 112%);

@@ -14,8 +14,6 @@
   &__wrapp {
     @include flex(center, center);
     flex-wrap: wrap;
-    margin-right: -8px;
-    margin-bottom: -8px;
 
     @include _1024 {
       margin-right: -16px;
@@ -25,11 +23,10 @@
   }
 
   &__card {
-    @include retinacontainer-width(306px);
+    @include retinacontainer-width(100%);
     margin-bottom: 8px;
-    margin-right: 8px;
 
-    @include _1024 {
+    @include _640 {
       @include retinacontainer-width(calc((100% - 16px) / 2));
       margin-right: 16px;
       margin-bottom: 16px;
@@ -47,12 +44,17 @@
     }
     &_content {
       @include retinacontainer-content;
+      @include flex(flex-end, flex-start, column);
       padding-top: 133px;
       padding-left: 17px;
       padding-right: 17px;
-      padding-bottom: 7px;
+      padding-bottom: 13px;
       border-radius: 8px 25px 8px 8px;
       background-color: $light-color;
+
+      @include _640 {
+        padding-top: 78px;
+      }
 
       @include _1024 {
         padding-left: 40px;
@@ -67,7 +69,7 @@
   &__imageblock {
     border-radius: 8px 25px 8px 8px;
     width: 100%;
-    height: 145px;
+    height: 71%;
     overflow: hidden;
 
     @include pos(absolute, 0, 0, 0);
@@ -110,9 +112,14 @@
     }
   }
   &__text {
-    height: 37px;
+    height: 28px;
     @include font(12px, 400, $dark-color, 112%);
     overflow: hidden;
+
+    @include _425 {
+      height: 40px;
+    }
+
     @include _1024 {
       font-size: 14px;
       height: 48px;
@@ -128,6 +135,12 @@
     @include flex();
     @include pos(absolute, 9px, 9px);
     z-index: 2;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      background-color: $semi-dark-color;
+      transform: translateY(-0.25rem);
+    }
 
     @include _1024 {
       top: 17px;

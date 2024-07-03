@@ -55,14 +55,35 @@
 
   &__linkAll {
     width: 173px;
-    background-color: $medium-color;
-    text-transform: none;
+    background-color: $light-color;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      background-color: $light-color;
+    }
 
     @include _1024 {
       margin-right: 20px;
       width: 234px;
-      font-size: 17px;
     }
+
+    &_text {
+      color: $light-color;
+      position: relative;
+      z-index: 2;
+      transition: color 0.4s;
+
+      @include _1024 {
+        font-size: 17px;
+      }
+    }
+
+    &:hover &_text {
+      color: $semi-dark-color;
+    }
+
+    @include animation-bg-left-to-right($medium-color);
   }
 
   &__accentbtn {
@@ -72,7 +93,6 @@
     max-width: 306px;
     margin: 0 auto;
     margin-top: 25px;
-    text-transform: none;
 
     @include _1024 {
       margin: 0;
@@ -91,7 +111,7 @@
       @include _1024 {
         width: 28px;
         height: 28px;
-        margin-right: 10px;
+        margin-right: 2px;
       }
     }
   }
