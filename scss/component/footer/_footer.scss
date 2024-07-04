@@ -94,6 +94,9 @@
     flex-wrap: wrap;
     margin-bottom: 20px;
 
+    @include _640 {
+    }
+
     @include _1024 {
       margin-bottom: 45px;
     }
@@ -123,6 +126,10 @@
       @include _640 {
         width: 50%;
         justify-content: flex-start;
+
+        .tel__manager {
+          margin-left: auto;
+        }
       }
 
       @include _1024 {
@@ -134,6 +141,23 @@
     .tel__wrapper {
       @include _1024 {
         order: 3;
+      }
+    }
+
+    .schedule__icon {
+      @include _640 {
+        margin-left: auto;
+      }
+    }
+
+    .schedule__text {
+      @include _640 {
+        width: auto;
+        text-align: end;
+      }
+
+      @include _1024 {
+        text-align: start;
       }
     }
   }

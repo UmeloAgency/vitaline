@@ -1490,6 +1490,10 @@ body {
     width: 50%;
     justify-content: flex-start;
   }
+  .footer .header .logo__link .tel__manager,
+  .footer .header .tel__wrapper .tel__manager {
+    margin-left: auto;
+  }
 }
 @media (min-width: 1024px) {
   .footer .header .logo__link,
@@ -1501,6 +1505,22 @@ body {
 @media (min-width: 1024px) {
   .footer .header .tel__wrapper {
     order: 3;
+  }
+}
+@media (min-width: 640px) {
+  .footer .header .schedule__icon {
+    margin-left: auto;
+  }
+}
+@media (min-width: 640px) {
+  .footer .header .schedule__text {
+    width: auto;
+    text-align: end;
+  }
+}
+@media (min-width: 1024px) {
+  .footer .header .schedule__text {
+    text-align: start;
   }
 }
 
