@@ -3,40 +3,74 @@
     background-color: $semi-dark-color;
   }
 
-  &__wrapp {
+  &.container {
+    @include _425 {
+      @include flex(space-between, center);
+      flex-wrap: wrap;
+    }
+
     @include _1024 {
-      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &__wrapp {
+    @include _425 {
+      width: 100%;
+      @include flex(center, center, column);
+      order: 4;
+    }
+
+    @include _1024 {
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      margin-top: 39px;
     }
   }
 
   &__title {
     margin-bottom: 14px;
     color: $light-color;
+
+    @include _425 {
+      order: 1;
+      width: 50%;
+      margin-bottom: 0px;
+    }
   }
 
   &__subtitle {
     @include font(13px, 600, $semi-medium-color, 112%);
     margin-bottom: 25px;
 
+    @include _425 {
+      order: 3;
+      margin-top: 14px;
+    }
+
     @include _1024 {
       font-size: 16px;
       font-weight: 700;
+      order: 2;
+      width: 50%;
+      text-align: end;
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
   &__animation {
     flex-shrink: 0;
     border-radius: 5px 25px 5px 5px;
-    // max-width: 306px;
     width: 100%;
-    // height: 264px;
     max-width: 584px;
     margin-left: auto;
     margin-right: auto;
 
     @include _1024 {
       max-width: 528px;
-      // width: 528px;
-      height: 455px;
+      max-height: 455px;
+      height: auto;
       margin-right: 16px;
       width: 47%;
     }
@@ -58,6 +92,38 @@
     }
   }
 
+  &__subcaruselwrapp {
+    @include retinacontainer-height(78.4%);
+    margin-bottom: 25px;
+
+    @include _1024 {
+      margin-bottom: 0;
+    }
+  }
+
+  .card {
+    background-color: transparent;
+
+    @include _1024 {
+      @include flex(space-between, stretch, column);
+    }
+
+    &__wrapper {
+      @include retinacontainer-width(calc((100% - 8px) / 2));
+
+      &:not(:last-child) {
+        margin-right: 8px;
+
+        @include _1024 {
+          margin-right: 16px;
+        }
+      }
+    }
+    &__inner {
+      @include retinacontainer-height(161%);
+    }
+  }
+
   .carusel {
     max-width: 584px;
     margin-top: 8px;
@@ -76,42 +142,53 @@
       @include retinacontainer-content;
     }
   }
-  &__subcaruselwrapp {
-    @include retinacontainer-height(78.4%);
-    margin-bottom: 25px;
-
-    @include _1024 {
-      margin-bottom: 0;
-    }
-  }
-
-  .card {
-    background-color: transparent;
-
-    &__wrapper {
-      @include retinacontainer-width(calc((100% - 8px) / 2));
-
-      &:not(:last-child) {
-        margin-right: 8px;
-
-        @include _1024 {
-          margin-right: 16px;
-        }
-      }
-    }
-    &__inner {
-      @include retinacontainer-height(161%);
-    }
-  }
 
   .carusel__btn {
     border: 1px solid $medium-color;
   }
 
+  .carusel__buttonwrapper {
+    @include _425 {
+      order: 5;
+      width: 100%;
+    }
+
+    @include _1024 {
+      order: 6;
+      width: auto;
+    }
+  }
   .carusel__accentbtn {
-    width: 238px;
-    max-width: 238px;
+    width: 100%;
+    max-width: 100%;
     overflow: hidden;
+
+    .carusel__accentbtn_icon {
+      margin-right: 2px;
+    }
+
+    @include _425 {
+      width: 173px;
+      min-width: 173px;
+      max-width: 173px;
+      order: 2;
+      margin: 0;
+    }
+
+    @include _1024 {
+      min-width: 212px;
+      max-width: 212px;
+      order: 5;
+
+      .carusel__accentbtn_icon {
+        transition: all 0.2s linear;
+        visibility: hidden;
+        @include сentering-y;
+        left: -30px;
+        transition: all 0.2s linear;
+        order: 3;
+      }
+    }
 
     span {
       transition: all 0.2s linear;
@@ -119,24 +196,12 @@
 
     &:hover {
       background-color: $accent-color;
-
       span {
         transform: translateX(8px);
       }
-
       .carusel__accentbtn_icon {
         visibility: visible;
         left: 7px;
-      }
-    }
-
-    @include _1024 {
-      .carusel__accentbtn_icon {
-        transition: all 0.2s linear;
-        visibility: hidden;
-        @include сentering-y;
-        left: -30px;
-        transition: all 0.2s linear;
       }
     }
   }

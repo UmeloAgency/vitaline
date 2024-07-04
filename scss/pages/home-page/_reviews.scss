@@ -4,8 +4,10 @@
   }
 
   &.container {
-    @include flex(space-between, stretch);
-    flex-wrap: wrap;
+    @include _425 {
+      @include flex(space-between, stretch);
+      flex-wrap: wrap;
+    }
   }
 
   .card__wrapper {
