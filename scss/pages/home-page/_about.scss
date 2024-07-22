@@ -4,7 +4,7 @@
     justify-items: center;
 
     @include _1024 {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: repeat(2, 1fr);
       justify-items: start;
     }
   }
@@ -12,7 +12,7 @@
   &__block {
     @include _1024 {
       grid-area: 1 / 1 / 2 / 2;
-      width: 508px;
+      padding-right: 50px;
     }
   }
   &__title {
@@ -20,6 +20,7 @@
 
     @include _1024 {
       margin-bottom: 19px;
+      margin-top: 0;
     }
   }
 
@@ -41,7 +42,6 @@
     @include _1024 {
       font-size: 14px;
       margin-bottom: 36px;
-      height: 215px;
     }
   }
 
@@ -50,16 +50,14 @@
     margin-bottom: 24px;
     width: 100%;
     max-width: 656px;
+    object-fit: cover;
 
     @include _1024 {
       grid-area: 1 / 2 / 3 / 3;
       margin-bottom: 0;
-      margin-left: 64px;
+      margin-left: 14px;
       max-width: fill-available;
-    }
-
-    @include _1024-1100 {
-      margin-left: 20px;
+      height: 100%;
     }
   }
 

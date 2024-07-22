@@ -67,10 +67,10 @@
   }
   &__position {
     @include font(12px, 500, $semi-dark-color, 133%);
-    margin-bottom: 19px;
+    margin-bottom: 13px;
     margin-left: 20px;
     margin-right: 16px;
-    height: 32px;
+    height: 38px;
     overflow: hidden;
 
     @include _1024 {

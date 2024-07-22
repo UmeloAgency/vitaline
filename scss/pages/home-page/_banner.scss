@@ -28,7 +28,7 @@
       @include flex(flex-start, flex-start, column);
 
       height: 432px;
-      padding-bottom: 4px;
+      padding-bottom: 0px;
     }
 
     @include _1248 {
@@ -44,12 +44,17 @@
     height: auto;
     margin-bottom: 23px;
     position: relative;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
 
     &::before {
       content: '';
       display: block;
       height: 48px;
-      @include pos(absolute, auto, 0, -4px, 0);
+      @include pos(absolute, auto, 0, -1px, 0);
       z-index: 1;
       background: linear-gradient(rgba(226, 107, 135, 0) 0%, #de6682 100%);
     }
@@ -66,7 +71,11 @@
       order: 4;
       align-self: auto;
       width: 500px;
-      height: auto;
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
 
       &::before {
         height: 88px;
@@ -257,7 +266,10 @@
     @include _1024 {
       width: 228px;
       margin-right: 23px;
-      font-size: 16px;
+
+      span {
+        font-size: 16px;
+      }
     }
   }
   &__button.detail {

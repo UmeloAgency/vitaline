@@ -45,22 +45,22 @@
     &_content {
       @include retinacontainer-content;
       @include flex(flex-end, flex-start, column);
-      padding-top: 133px;
+      // padding-top: 133px;
       padding-left: 17px;
       padding-right: 17px;
-      padding-bottom: 13px;
+      padding-bottom: 18px;
       border-radius: 8px 25px 8px 8px;
       background-color: $light-color;
 
       @include _640 {
-        padding-top: 78px;
+        // padding-top: 78px;
       }
 
       @include _1024 {
         padding-left: 40px;
         padding-right: 50px;
         padding-bottom: 26px;
-        padding-top: 44%;
+        // padding-top: 44%;
         border-radius: 10px 36px 10px 10px;
       }
     }
@@ -112,13 +112,13 @@
     }
   }
   &__text {
-    height: 28px;
+    height: 26px;
     @include font(12px, 400, $dark-color, 112%);
     overflow: hidden;
 
-    @include _425 {
-      height: 40px;
-    }
+    // @include _425 {
+    //   height: 40px;
+    // }
 
     @include _1024 {
       font-size: 14px;

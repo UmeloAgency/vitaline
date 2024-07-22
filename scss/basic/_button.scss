@@ -7,7 +7,7 @@
 
   *,
   & {
-    @include font(13px, 700, $light-color, 112%);
+    @include font(13px, 600, $light-color, 100%);
     text-align: center;
   }
 

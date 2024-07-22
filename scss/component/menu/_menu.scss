@@ -22,6 +22,7 @@
   &__item {
     position: relative;
     @include font(15px, 600, $dark-color, 209%);
+    text-transform: none;
 
     &:hover {
       color: $accent-color;
