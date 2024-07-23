@@ -35,6 +35,10 @@
       margin-bottom: 0;
       height: 600px;
     }
+
+    @include _1180 {
+      overflow: hidden;
+    }
   }
 
   // .carusel {

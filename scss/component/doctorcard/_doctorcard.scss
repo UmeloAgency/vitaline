@@ -116,6 +116,12 @@
   }
   &__button {
     width: calc((100% - 15px) / 2);
+
+    @include _1024 {
+      opacity: 0;
+      height: 39px;
+      transition: all 0.3s linear;
+    }
     span {
       position: relative;
       z-index: 2;
@@ -139,12 +145,6 @@
       background-color: $semi-medium-color;
 
       @include animation-bg-left-to-right($dark-color);
-    }
-
-    @include _1024 {
-      opacity: 0;
-      height: 39px;
-      transition: all 0.3s linear;
     }
   }
 
@@ -171,16 +171,20 @@
   }
 }
 
+.slick-list {
+  overflow: visible;
+}
+
 .card__wrapper {
   @include _1024 {
     &:hover .doctorcard__buttonblock {
-      transition: all 0.15s linear;
+      transition: all 0.1s linear;
       bottom: -74px;
     }
 
     &:hover .doctorcard__button {
       opacity: 1;
-      transition: all 0.3s linear 0.25s;
+      transition: all 0.12s linear 0.12s;
     }
   }
 }

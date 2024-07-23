@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Raleway:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="./style/css/style.min.css" />
@@ -632,7 +633,7 @@
         <h3 class="doctors__title title">НАШІ ЛІКАРІ</h3>
 
         <div class="carusel doctors__carusel">
-          <div class="carusel__wrapper" id="slider-doc">
+          <div class="" id="slider-doc">
             <div class="card__wrapper">
               <div class="card__inner">
                 <div class="doctorcard__content card">
@@ -971,7 +972,7 @@
           <div class="carusel__controllers">
             <button
               type="button"
-              class="carusel__btn left button-icon slick-prev"
+              class="carusel__btn left button-icon"
               id="slider-left-doc"
               aria-label="Next"
             >
@@ -989,7 +990,7 @@
               </svg>
             </button>
           </div>
-          <button class="button-text carusel__linkAll slick-next">
+          <button class="button-text carusel__linkAll">
             <a href="/" class="carusel__linkAll_text">Дивитись усіх лікарів</a>
           </button>
         </div>
@@ -1491,51 +1492,93 @@
     </div>
 
     <script src="js/menu.js"></script>
-    <script src="js/jquery.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/beforeafter.js"></script>
-    <script src="js/slick.js"></script>
+    <!-- <script src="slick/slick.min.js"></script> -->
     <!-- <script src="js/carusel.js"></script> -->
 
     <script type="text/javascript">
       $(document).ready(function () {
         $('#slider-doc').slick({
-          // settingname: setting-value
-        });
-      });
-
-      $('.before_after_image_slider').slick({
-        slidesToShow: 1,
-        arrows: true,
-        draggable: false,
-        centerMode: true,
-        centerPadding: 0,
-        swipe: false,
-        adaptiveHeight: true,
-        responsive: [
-          {
-            breakpoint: 1080,
-            settings: {
-              // arrows: false
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          variableWidth: true,
+          prevArrow: document.querySelector('#slider-right-doc'),
+          nextArrow: document.querySelector('#slider-right-doc'),
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+              },
             },
-          },
-        ],
-      });
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ],
+        });
 
-      $('.before_after_image_slide').beforeAfter({
-        movable: true,
-        clickMove: true,
-        position: 50,
-        separatorColor: '#fafafa',
-        bulletColor: '#fafafa',
-        onMoveStart: function (e) {
-          // console.log(event.target);
-        },
-        onMoving: function () {
-          // console.log(event.target);
-        },
-        onMoveEnd: function () {
-          // console.log(event.target);
-        },
+        // $('.before_after_image_slider').slick({
+        //   slidesToShow: 1,
+        //   arrows: true,
+        //   draggable: false,
+        //   centerMode: true,
+        //   centerPadding: 0,
+        //   swipe: false,
+        //   adaptiveHeight: true,
+        //   responsive: [
+        //     {
+        //       breakpoint: 1080,
+        //       settings: {
+        //         // arrows: false
+        //       },
+        //     },
+        //   ],
+        // });
+
+        $('.before_after_image_slide').beforeAfter({
+          movable: true,
+          clickMove: true,
+          position: 50,
+          separatorColor: '#fafafa',
+          bulletColor: '#fafafa',
+          onMoveStart: function (e) {
+            // console.log(event.target);
+          },
+          onMoving: function () {
+            // console.log(event.target);
+          },
+          onMoveEnd: function () {
+            // console.log(event.target);
+          },
+        });
       });
     </script>
   </body>
