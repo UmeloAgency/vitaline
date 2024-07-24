@@ -94,8 +94,8 @@
           top: '0',
           left: '0',
           width: '100%',
-          //'height': 'auto',
-          //'float': 'left',
+          // height: 'auto',
+          // float: 'left',
         });
 
         jQuery(secondImg).css({

@@ -3,6 +3,7 @@
   overflow: hidden;
   width: 100%;
 
+  //del
   &__wrapper {
     @include flex(center, flex-start);
     flex-wrap: nowrap;
@@ -11,7 +12,10 @@
   }
 
   &__buttonwrapper {
+    width: 100%;
+
     @include _1024 {
+      width: auto;
       @include flex(space-between);
       flex-direction: row-reverse;
     }
@@ -88,30 +92,59 @@
 
   &__accentbtn {
     @extend .button-text;
-    min-width: 212px;
-    width: 100%;
-    max-width: 306px;
-    margin: 0 auto;
+    margin: 0;
     margin-top: 25px;
+    min-width: 120px;
+    overflow: hidden;
 
     @include _1024 {
-      margin: 0;
-      width: 212px;
-      max-width: 212px;
       font-size: 16px;
+      min-width: 212px;
+    }
+
+    &:hover {
+      background-color: $accent-color;
+      .carusel__accentbtn_text {
+        transform: translateX(8px);
+      }
+      .carusel__accentbtn_icon {
+        visibility: visible;
+        left: 12px;
+      }
     }
 
     &_icon {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       stroke: $light-color;
       fill: none;
-      margin-right: 14px;
+      transition: all 0.2s linear;
+      @include сentering-y;
+      left: 12px;
 
       @include _1024 {
         width: 28px;
         height: 28px;
-        margin-right: 2px;
+        visibility: hidden;
+        @include сentering-y;
+        left: -30px;
+      }
+    }
+
+    &_text {
+      transition: all 0.2s linear;
+      margin: 0 25px;
+      transform: translateX(8px);
+      max-width: 90px;
+
+      @include _640 {
+        max-width: fit-content;
+      }
+
+      @include _1024 {
+        transform: translateX(0);
+        margin: 0 34px;
+        flex-shrink: 0;
       }
     }
   }

@@ -4,32 +4,37 @@
   }
 
   &.container {
-    @include _425 {
-      @include flex(space-between, stretch);
-      flex-wrap: wrap;
-    }
+    @include flex(space-between, center);
+    flex-wrap: wrap;
   }
 
-  .card__wrapper {
-    margin-right: 8px;
+  &__title {
+    order: 1;
+    padding-right: 6px;
+
     @include _1024 {
-      margin-right: 16px;
-      @include retinacontainer-width(364px);
+      width: 100%;
     }
   }
 
-  .card__inner {
-    @include retinacontainer-height(155.6%);
+  .card {
+    &__wrapper {
+      @include _1024 {
+        @include retinacontainer-width(364px);
+      }
+    }
+
+    &__inner {
+      @include retinacontainer-height(155.6%);
+    }
   }
 
   .carusel {
+    margin-top: 25px;
     margin-bottom: 25px;
     height: 418px;
     overflow: visible;
-
-    @include _425 {
-      order: 3;
-    }
+    order: 3;
 
     @include _1024 {
       height: 567px;
@@ -37,97 +42,31 @@
       order: 2;
       overflow: hidden;
     }
-  }
 
-  .carusel__buttonwrapper {
-    width: 100%;
-    @include _425 {
+    &__buttonwrapper {
       order: 4;
     }
 
-    @include _1024 {
-      width: auto;
-    }
-  }
-
-  .carusel__buttonblock {
-    @include _1024 {
-      margin: 0;
-      width: auto;
-    }
-  }
-
-  .carusel__accentbtn {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-
-    @include _425 {
-      width: 173px;
-      min-width: 173px;
-      max-width: 173px;
+    &__accentbtn {
       order: 2;
-      margin: 0;
-    }
 
-    @include _1024 {
-      min-width: 212px;
-      max-width: 212px;
-
-      .carusel__accentbtn_icon {
-        transition: all 0.2s linear;
-        visibility: hidden;
-        @include сentering-y;
-        left: -30px;
-        transition: all 0.2s linear;
-        order: 3;
-      }
-    }
-
-    span {
-      transition: all 0.2s linear;
-    }
-
-    &:hover {
-      background-color: $accent-color;
-      span {
-        transform: translateX(8px);
-      }
-      .carusel__accentbtn_icon {
-        visibility: visible;
-        left: 12px;
+      @include _1024 {
+        .carusel__accentbtn_icon {
+          order: 3;
+        }
       }
     }
   }
+}
 
-  &__title {
-    padding-right: 30%;
-    margin-bottom: 25px;
+.reviews__card {
+  padding: 21px 23px 23px 27px;
 
-    @include _425 {
-      order: 1;
-      padding-right: 6px;
-      width: min-content;
-    }
-    @include _1024 {
-      width: 100%;
-    }
+  @include _1024 {
+    padding: 26px 31px 34px 37px;
   }
 
-  &__card {
-    padding-top: 21px;
-    padding-left: 27px;
-    padding-right: 23px;
-    padding-bottom: 23px;
-
-    @include _1024 {
-      padding-top: 26px;
-      padding-left: 37px;
-      padding-right: 31px;
-      padding-bottom: 34px;
-    }
-  }
-  &__topblock {
+  &_topblock {
     margin-bottom: 18px;
     @include flex(space-between);
 
@@ -163,7 +102,7 @@
     }
   }
 
-  &__text {
+  &_text {
     @include font(12px, 400, $dark-color, 112%);
     height: 205px;
     overflow: hidden;
@@ -176,7 +115,7 @@
     }
   }
 
-  &__textcontrol {
+  &_textcontrol {
     @include flex(flex-start);
     margin-bottom: 30px;
 
@@ -214,7 +153,7 @@
     }
   }
 
-  &__doctor {
+  &_doctor {
     @include flex(flex-start);
     &_image {
       border-radius: 100%;

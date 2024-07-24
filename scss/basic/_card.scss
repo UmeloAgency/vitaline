@@ -10,6 +10,11 @@
   &__wrapper {
     @include retinacontainer-width(268px);
     flex-shrink: 0;
+    margin-right: 8px;
+
+    @include _1024 {
+      margin-right: 16px;
+    }
   }
   &__inner {
     @include retinacontainer-height(185.5%);

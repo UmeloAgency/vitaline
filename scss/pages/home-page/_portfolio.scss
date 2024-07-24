@@ -4,10 +4,8 @@
   }
 
   &.container {
-    @include _425 {
-      @include flex(space-between, center);
-      flex-wrap: wrap;
-    }
+    @include flex(space-between, center);
+    flex-wrap: wrap;
 
     @include _1024 {
       align-items: flex-end;
@@ -15,11 +13,9 @@
   }
 
   &__wrapp {
-    @include _425 {
-      width: 100%;
-      @include flex(center, center, column);
-      order: 4;
-    }
+    width: 100%;
+    @include flex(center, center, column);
+    order: 4;
 
     @include _1024 {
       flex-direction: row;
@@ -30,24 +26,17 @@
   }
 
   &__title {
-    margin-bottom: 14px;
     color: $light-color;
-
-    @include _425 {
-      order: 1;
-      width: 50%;
-      margin-bottom: 0px;
-    }
+    order: 1;
+    width: 50%;
+    margin-bottom: 0px;
   }
 
   &__subtitle {
     @include font(13px, 600, $semi-medium-color, 112%);
     margin-bottom: 25px;
-
-    @include _425 {
-      order: 3;
-      margin-top: 14px;
-    }
+    margin-top: 14px;
+    order: 3;
 
     @include _1024 {
       font-size: 16px;
@@ -76,19 +65,19 @@
     }
   }
 
-  &__photo {
-  }
-
-  &__image:first-child {
-    margin-bottom: 8px;
-    border-radius: 5px 25px 5px 5px;
-  }
-
-  &__card {
+  &__image {
     border-radius: 5px 25px 5px 5px;
 
     @include _1024 {
       border-radius: 10px 36px 10px 10px;
+    }
+
+    &_wrapper {
+      background-color: transparent;
+
+      @include _1024 {
+        @include flex(space-between, stretch, column);
+      }
     }
   }
 
@@ -102,22 +91,8 @@
   }
 
   .card {
-    background-color: transparent;
-
-    @include _1024 {
-      @include flex(space-between, stretch, column);
-    }
-
     &__wrapper {
       @include retinacontainer-width(calc((100% - 8px) / 2));
-
-      &:not(:last-child) {
-        margin-right: 8px;
-
-        @include _1024 {
-          margin-right: 16px;
-        }
-      }
     }
     &__inner {
       @include retinacontainer-height(161%);
@@ -137,72 +112,48 @@
 
     &__wrapper {
       width: 100%;
-
       margin-right: -8px;
       @include retinacontainer-content;
     }
-  }
 
-  .carusel__btn {
-    border: 1px solid $medium-color;
-  }
-
-  .carusel__buttonwrapper {
-    @include _425 {
+    &__btn {
+      border: 1px solid $medium-color;
+    }
+    &__buttonwrapper {
       order: 5;
-      width: 100%;
-    }
 
-    @include _1024 {
-      order: 6;
-      width: auto;
+      @include _1024 {
+        order: 6;
+      }
     }
-  }
-  .carusel__accentbtn {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-
-    .carusel__accentbtn_icon {
-      margin-right: 2px;
-    }
-
-    @include _425 {
-      width: 173px;
-      min-width: 173px;
-      max-width: 173px;
+    &__accentbtn {
+      overflow: hidden;
       order: 2;
       margin: 0;
-    }
 
-    @include _1024 {
-      min-width: 212px;
-      max-width: 212px;
-      order: 5;
-
-      .carusel__accentbtn_icon {
-        transition: all 0.2s linear;
-        visibility: hidden;
-        @include сentering-y;
-        left: -30px;
-        transition: all 0.2s linear;
-        order: 3;
+      @include _1024 {
+        order: 5;
       }
-    }
 
-    span {
-      transition: all 0.2s linear;
-    }
+      &_text {
+        max-width: 70px;
 
-    &:hover {
-      background-color: $accent-color;
-      span {
-        transform: translateX(8px);
+        @include _640 {
+          max-width: fit-content;
+        }
       }
-      .carusel__accentbtn_icon {
-        visibility: visible;
-        left: 7px;
+
+      &_icon {
+        @include _1024 {
+          order: 3;
+        }
       }
     }
   }
+}
+
+.before_after_image_slide {
+  display: block !important;
+  max-width: 900px;
+  margin: 0 auto;
 }
