@@ -1161,6 +1161,112 @@
                 </div>
               </div>
             </div>
+
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="reviews__card card">
+                  <div class="reviews__topblock">
+                    <div class="reviews__topblock_wrapp">
+                      <p class="reviews__topblock_name">Анастасия</p>
+                      <p class="reviews__topblock_date">18 января 2023</p>
+                    </div>
+                    <svg class="reviews__topblock_icon">
+                      <use href="./symbol-defs.svg#icon-mini-logo"></use>
+                    </svg>
+                  </div>
+                  <p class="reviews__text">
+                    Хочу висловити свою глибоку вдячність
+                    лікарю-гастроентерологу за професіоналізм і турботу! 🙌 Вона
+                    докладає неймовірних зусиль, щоб кожен пацієнт почував себе
+                    зрозумілим і впевненим в лікуванні. Лікар детально
+                    роз'яснила мені про моє становище, приділила увагу кожній
+                    дрібниці і запропонувала найкращі методи лікування. Її
+                    відданість і доброзичливість справили неймовірно позитивне
+                    враження на мене! 🌈 Відтепер я відчуваю себе в надійних
+                    руках цього видатного фахівця. Дякую за Ваш професіоналізм,
+                    турботу та підтримку! Рекомендую цього лікаря усім, хто
+                    шукає дійсно якісну медичну допомогу. 👩‍⚕️
+                  </p>
+
+                  <div class="reviews__textcontrol">
+                    <button type="button" class="reviews__textcontrol_btn">
+                      Читати далі
+                    </button>
+                    <a href="" class="reviews__textcontrol_link">Про лiкаря</a>
+                  </div>
+
+                  <div class="reviews__doctor">
+                    <img
+                      src="./dev_copmonent/minidoctor.png"
+                      alt=""
+                      srcset=""
+                      class="reviews__doctor_image"
+                    />
+                    <div class="reviews__doctor_info">
+                      <p class="reviews__doctor_name">
+                        Красуля Анастасія Романівна
+                      </p>
+                      <p class="reviews__doctor_position">
+                        Главный врач, врач-стомат...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__wrapper">
+              <div class="card__inner">
+                <div class="reviews__card card">
+                  <div class="reviews__topblock">
+                    <div class="reviews__topblock_wrapp">
+                      <p class="reviews__topblock_name">Анастасия</p>
+                      <p class="reviews__topblock_date">18 января 2023</p>
+                    </div>
+                    <svg class="reviews__topblock_icon">
+                      <use href="./symbol-defs.svg#icon-mini-logo"></use>
+                    </svg>
+                  </div>
+                  <p class="reviews__text">
+                    Хочу висловити свою глибоку вдячність
+                    лікарю-гастроентерологу за професіоналізм і турботу! 🙌 Вона
+                    докладає неймовірних зусиль, щоб кожен пацієнт почував себе
+                    зрозумілим і впевненим в лікуванні. Лікар детально
+                    роз'яснила мені про моє становище, приділила увагу кожній
+                    дрібниці і запропонувала найкращі методи лікування. Її
+                    відданість і доброзичливість справили неймовірно позитивне
+                    враження на мене! 🌈 Відтепер я відчуваю себе в надійних
+                    руках цього видатного фахівця. Дякую за Ваш професіоналізм,
+                    турботу та підтримку! Рекомендую цього лікаря усім, хто
+                    шукає дійсно якісну медичну допомогу. 👩‍⚕️
+                  </p>
+
+                  <div class="reviews__textcontrol">
+                    <button type="button" class="reviews__textcontrol_btn">
+                      Читати далі
+                    </button>
+                    <a href="" class="reviews__textcontrol_link">Про лiкаря</a>
+                  </div>
+
+                  <div class="reviews__doctor">
+                    <img
+                      src="./dev_copmonent/minidoctor.png"
+                      alt=""
+                      srcset=""
+                      class="reviews__doctor_image"
+                    />
+                    <div class="reviews__doctor_info">
+                      <p class="reviews__doctor_name">
+                        Красуля Анастасія Романівна
+                      </p>
+                      <p class="reviews__doctor_position">
+                        Главный врач, врач-стомат...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="carusel__buttonwrapper">
@@ -1513,7 +1619,7 @@
         $('#slider-doc').slick({
           infinite: true,
           slidesToShow: 4,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           variableWidth: true,
           prevArrow: document.querySelector('#slider-right-doc'),
           nextArrow: document.querySelector('#slider-right-doc'),
@@ -1522,7 +1628,7 @@
               breakpoint: 1024,
               settings: {
                 slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
               },
             },
             {
@@ -1542,6 +1648,40 @@
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object
+          ],
+        });
+
+        $('#slider-reviews').slick({
+          infinite: true,
+          // arrows: true,
+          // swipeToSlide: true,
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          variableWidth: true,
+          prevArrow: document.querySelector('#slider-left-reviews'),
+          nextArrow: document.querySelector('#slider-right-reviews'),
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
           ],
         });
 
