@@ -394,14 +394,26 @@
   cursor: pointer;
   height: 39px;
   width: 100%;
+  transition: all 0.2s linear;
 
   @include _1024 {
     height: 50px;
     width: 50px;
 
-    &:hover .input__search_input {
-      width: 295px;
-      padding-left: 52px;
+    &:hover {
+      .input__search_icon {
+        background-color: $semi-medium-color;
+
+        svg {
+          stroke: $semi-dark-color;
+        }
+      }
+
+      .input__search_input {
+        width: 295px;
+        padding-left: 52px;
+        background-color: $semi-medium-color;
+      }
     }
   }
 
@@ -410,16 +422,18 @@
     width: 46px;
     height: 39px;
     border-radius: 100%;
-    background-color: $semi-medium-color;
+    background-color: $semi-dark-color;
     @include flex;
     @include сentering-y;
     z-index: 2;
+    transition: all 0.2s linear;
 
     svg {
       height: 22px;
       width: 22px;
-      stroke: $semi-dark-color;
+      stroke: $semi-medium-color;
       fill: none;
+      transition: all 0.2s linear;
     }
 
     @include _1024 {
@@ -432,7 +446,7 @@
     height: 100%;
     border-radius: 100px;
     padding: 17px 19px;
-    background-color: $semi-medium-color;
+    background-color: $semi-dark-color;
     border: none;
     padding-left: 48px;
     cursor: pointer;
