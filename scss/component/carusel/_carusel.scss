@@ -93,14 +93,12 @@
   &__accentbtn {
     @extend .button-text;
     margin: 0;
-    margin-top: 25px;
     min-width: 120px;
     overflow: hidden;
 
     @include _1024 {
       font-size: 16px;
       min-width: 212px;
-      margin-top: 0;
     }
 
     &:hover {
