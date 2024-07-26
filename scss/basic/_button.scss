@@ -21,14 +21,8 @@
     }
   }
 
-  &:active {
+  &:hover {
     background-color: $medium-color;
-  }
-
-  @include _1024 {
-    &:hover {
-      background-color: $medium-color;
-    }
   }
 }
 

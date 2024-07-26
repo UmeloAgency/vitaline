@@ -11,9 +11,6 @@
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="cleartype" content="on" />
 
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -1329,24 +1326,144 @@
         <p class="portfolio__subtitle">Ми даємо гарантований результат</p>
 
         <div class="portfolio__wrapp">
-          <div class="portfolio__animation before_after_image_row">
-            <div class="before_after_image_slide">
-              <img
-                src="./dev_copmonent/до.jpg"
-                alt=""
-                class="portfolio__photo"
-              />
-              <img
-                src="./dev_copmonent/после.jpg"
-                alt=""
-                class="portfolio__photo"
-              />
+          <div class="portfolio__animation">
+            <div class="portfolio__animation_inner">
+              <div
+                class="portfolio__animation_content"
+                id="slider-portfolio-autoplay"
+              >
+                <div class="before_after_image_row">
+                  <div class="before_after_image_slide">
+                    <img src="./dev_copmonent/после.jpg" alt="" />
+                    <img src="./dev_copmonent/до.jpg" alt="" />
+                  </div>
+                </div>
+
+                <div class="before_after_image_row">
+                  <div class="before_after_image_slide">
+                    <img src="./dev_copmonent/portfolio.png" alt="" />
+                    <img src="./dev_copmonent/portpholiomini.png" alt="" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="carusel">
-            <div class="portfolio__subcaruselwrapp">
-              <div class="carusel__wrapper" id="slider-portfolio">
-                <div class="card__wrapper">
+          <div class="portfolio__carusel carusel">
+            <div class="portfolio__caruselwrapp">
+              <div class="portfolio__carusel__wrapper" id="slider-portfolio">
+                <img
+                  src="./dev_copmonent/portpholiomini.png"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/cosmetolog.jpg"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/portfolio.png"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/masage.jpg"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/portpholiomini.png"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/cosmetolog.jpg"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/portfolio.png"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/masage.jpg"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/portpholiomini.png"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/cosmetolog.jpg"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/portfolio.png"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/masage.jpg"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/portpholiomini.png"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/cosmetolog.jpg"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/portfolio.png"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <img
+                  src="./dev_copmonent/masage.jpg"
+                  alt=""
+                  srcset=""
+                  class="portfolio__image"
+                />
+
+                <!-- <div class="card__wrapper">
                   <div class="card__inner">
                     <div class="portfolio__image_wrapper">
                       <img
@@ -1359,17 +1476,17 @@
                         src="./dev_copmonent/portpholiomini.png"
                         alt=""
                         srcset=""
-                        class="portfolio__image"
+                        class="card__image"
                       />
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
         </div>
 
-        <div class="carusel__buttonwrapper">
+        <div class="portfolio__controllers carusel__buttonwrapper">
           <div class="carusel__buttonblock">
             <div class="carusel__controllers">
               <button
@@ -1495,7 +1612,10 @@
                 </svg>
               </a>
             </div>
-            <button type="button" class="footer__button button-text">
+            <button
+              type="button"
+              class="footer__button button-text button__online"
+            >
               онлайн запис
             </button>
           </div>
@@ -1557,19 +1677,16 @@
       </div>
     </div>
 
+    <script src="js/jquery.min.js"></script>
     <script src="js/menu.js"></script>
 
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script> -->
     <script type="text/javascript" src="slick/slick.min.js"></script>
 
-    <!-- <script src="js/jquery.min.js"></script> -->
     <script src="js/beforeafter.js"></script>
     <!-- <script src="slick/slick.min.js"></script> -->
     <!-- <script src="js/carusel.js"></script> -->
@@ -1642,23 +1759,27 @@
         ],
       });
 
-      // $('.before_after_image_slider').slick({
-      //   slidesToShow: 1,
-      //   arrows: true,
-      //   draggable: false,
-      //   centerMode: true,
-      //   centerPadding: 0,
-      //   swipe: false,
-      //   adaptiveHeight: true,
-      //   responsive: [
-      //     {
-      //       breakpoint: 1080,
-      //       settings: {
-      //         // arrows: false
-      //       },
-      //     },
-      //   ],
-      // });
+      $('#slider-portfolio').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        adaptiveHeight: true,
+        rows: 2,
+        prevArrow: document.querySelector('#slider-left-portfolio'),
+        nextArrow: document.querySelector('#slider-right-portfolio'),
+      });
+
+      $('#slider-portfolio-autoplay').slick({
+        slidesToShow: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        draggable: false,
+        centerMode: true,
+        centerPadding: 0,
+        swipe: false,
+        adaptiveHeight: false,
+      });
 
       $('.before_after_image_slide').beforeAfter({
         movable: true,
@@ -1667,13 +1788,13 @@
         separatorColor: '#fafafa',
         bulletColor: '#fafafa',
         onMoveStart: function (e) {
-          console.log('Start', event.target);
+          // console.log('Start', event.target);
         },
         onMoving: function () {
-          console.log('onMoving', event.target);
+          // console.log('onMoving', event.target);
         },
         onMoveEnd: function () {
-          console.log('onMoveEnd', event.target);
+          // console.log('onMoveEnd', event.target);
         },
       });
     </script>

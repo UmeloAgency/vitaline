@@ -77,13 +77,7 @@
   }
 
   &__button {
-    @include font(14px, 700, $light-color, 112%);
-    text-transform: uppercase;
-    background-color: $accent-color;
-    width: 172px;
-    margin-left: 13px;
     @include hidden;
-
     @include _768 {
       @include visible(flex);
     }

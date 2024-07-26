@@ -40,6 +40,10 @@ body {
     padding-bottom: 70px;
   }
 
+  @include _1170 {
+    width: 1170px;
+  }
+
   @include _1248 {
     width: 1248px;
     padding-left: 58px;

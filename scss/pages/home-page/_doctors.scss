@@ -49,6 +49,10 @@
     }
   }
 
+  .slick-list {
+    overflow: visible;
+  }
+
   .carusel__buttonblock {
     @include _1024 {
       margin-bottom: 42px;

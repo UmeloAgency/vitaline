@@ -94,8 +94,8 @@
           top: '0',
           left: '0',
           width: '100%',
-          // height: 'auto',
-          // float: 'left',
+          //'height': 'auto',
+          //'float': 'left',
         });
 
         jQuery(secondImg).css({
@@ -263,21 +263,9 @@
           });
 
           var mouseMove = function (e) {
-            let oPageX;
-
-            if (e.pageX) {
-              oPageX = e.pageX;
-            } else if (e && e.length > 0) {
-              if (e.touches[0]) {
-                if (e.touches[0].clientX && e.touches[0].clientX > 0) {
-                  oPageX = e.touches[0].clientX;
-                }
-              }
-            } else {
-              oPageX = 1;
-            }
-
+            var oPageX = e.pageX || e.touches[0].clientX;
             var oLeft = jQuery(that).offset().left;
+            //var oWidth = that.outerWidth();
             var oWidth = jQuery(that).width();
             var oRight = jQuery(separator).css('right');
             var oPos = oLeft + oWidth - oPageX;

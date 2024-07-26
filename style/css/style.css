@@ -259,6 +259,11 @@ body {
     padding-bottom: 70px;
   }
 }
+@media (min-width: 1170px) {
+  .container {
+    width: 1170px;
+  }
+}
 @media (min-width: 1248px) {
   .container {
     width: 1248px;
@@ -336,13 +341,8 @@ body {
     letter-spacing: 0.03em;
   }
 }
-.button-text:active, .carusel__accentbtn:active {
+.button-text:hover, .carusel__accentbtn:hover {
   background-color: #ea91a5;
-}
-@media (min-width: 1024px) {
-  .button-text:hover, .carusel__accentbtn:hover {
-    background-color: #ea91a5;
-  }
 }
 
 .button-icon {
@@ -651,6 +651,7 @@ body {
   .carusel__accentbtn {
     font-size: 16px;
     min-width: 212px;
+    margin-top: 0;
   }
 }
 .carusel__accentbtn:hover {
@@ -1104,26 +1105,6 @@ body {
     height: 26px;
   }
 }
-.nav .button__online {
-  margin-left: 17px;
-  width: 118px;
-  font-size: 10px;
-  font-weight: 700;
-  background-size: 100% auto;
-  text-transform: uppercase;
-}
-.nav .button__online:hover {
-  background-position: right center;
-  background-size: 200% auto;
-  animation: pulse512 1.5s infinite;
-}
-@media (min-width: 1024px) {
-  .nav .button__online {
-    margin-left: 10px;
-    width: 172px;
-    font-size: 14px;
-  }
-}
 
 @keyframes pulse512 {
   0% {
@@ -1381,6 +1362,27 @@ body {
   background-color: #f3eaed;
 }
 
+.button__online {
+  margin-left: 17px;
+  width: 118px;
+  font-size: 10px;
+  font-weight: 700;
+  background-size: 100% auto;
+  text-transform: uppercase;
+}
+.button__online:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  animation: pulse512 1.5s infinite;
+}
+@media (min-width: 1024px) {
+  .button__online {
+    margin-left: 10px;
+    width: 172px;
+    font-size: 14px;
+  }
+}
+
 .footer__title {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -1477,16 +1479,6 @@ body {
   margin-left: 30px;
 }
 .footer__button {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 112%;
-  color: #ffffff;
-  text-transform: uppercase;
-  background-color: #f79967;
-  width: 172px;
-  margin-left: 13px;
   display: none;
   visibility: hidden;
 }
@@ -1828,10 +1820,6 @@ body {
   font-weight: 400;
   line-height: 112%;
   color: #de6682;
-}
-
-.slick-list {
-  overflow: visible;
 }
 
 @media (min-width: 1024px) {
@@ -2892,6 +2880,9 @@ body {
     margin-right: 17px;
   }
 }
+.doctors .slick-list {
+  overflow: visible;
+}
 @media (min-width: 1024px) {
   .doctors .carusel__buttonblock {
     margin-bottom: 42px;
@@ -2958,6 +2949,9 @@ body {
   .reviews .carusel__accentbtn .carusel__accentbtn_icon {
     order: 3;
   }
+}
+.reviews .slick-list {
+  overflow: visible;
 }
 
 .reviews__card {
@@ -3199,7 +3193,6 @@ body {
 }
 .portfolio__animation {
   flex-shrink: 0;
-  border-radius: 5px 25px 5px 5px;
   width: 100%;
   max-width: 584px;
   margin-left: auto;
@@ -3207,55 +3200,46 @@ body {
 }
 @media (min-width: 1024px) {
   .portfolio__animation {
-    max-width: 528px;
-    max-height: 455px;
-    height: auto;
-    margin-right: 16px;
-    width: 47%;
+    max-width: 544px;
+    max-height: 0;
+    height: 0;
+    margin: 0;
+    padding-right: 16px;
+    width: 48%;
+    position: relative;
   }
 }
-.portfolio__image {
+.portfolio__animation_inner {
+  position: relative;
+  height: 0;
+  border: none;
+  padding-top: 87.2%;
+}
+.portfolio__animation_content {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.portfolio__animation .slick-list,
+.portfolio__animation .slick-track,
+.portfolio__animation .slick-slide {
+  height: 100%;
+}
+.portfolio__animation .before_after_image_slide {
   border-radius: 5px 25px 5px 5px;
-}
-@media (min-width: 1024px) {
-  .portfolio__image {
-    border-radius: 10px 36px 10px 10px;
-  }
-}
-.portfolio__image_wrapper {
-  background-color: transparent;
-}
-@media (min-width: 1024px) {
-  .portfolio__image_wrapper {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-}
-.portfolio__subcaruselwrapp {
+  overflow: hidden;
   position: relative;
-  height: 0;
-  border: none;
-  padding-top: 78.4%;
-  margin-bottom: 25px;
+  height: 100%;
 }
-@media (min-width: 1024px) {
-  .portfolio__subcaruselwrapp {
-    margin-bottom: 0;
-  }
+.portfolio__animation .before_after_image_slide img {
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.portfolio .card__wrapper {
-  width: calc((100% - 8px) / 2);
-  position: relative;
-}
-.portfolio .card__inner {
-  position: relative;
-  height: 0;
-  border: none;
-  padding-top: 161%;
-}
-.portfolio .carusel {
+.portfolio__carusel {
   max-width: 584px;
   margin-top: 8px;
   margin-left: auto;
@@ -3264,13 +3248,26 @@ body {
   position: relative;
 }
 @media (min-width: 1024px) {
-  .portfolio .carusel {
-    margin-top: 0;
+  .portfolio__carusel {
+    margin: 0;
+    width: 52%;
+    position: relative;
+    max-width: 580px;
   }
 }
-.portfolio .carusel__wrapper {
-  width: 100%;
-  margin-right: -8px;
+.portfolio__caruselwrapp {
+  position: relative;
+  height: 0;
+  border: none;
+  padding-top: 78.4%;
+  margin-bottom: 25px;
+}
+@media (min-width: 1024px) {
+  .portfolio__caruselwrapp {
+    margin-bottom: 0;
+  }
+}
+.portfolio__carusel__wrapper {
   z-index: 1;
   position: absolute;
   top: 0;
@@ -3278,14 +3275,43 @@ body {
   bottom: 0;
   left: 0;
 }
-.portfolio .carusel__btn {
+.portfolio__carusel .slick-list,
+.portfolio__carusel .slick-track,
+.portfolio__carusel .slick-slide {
+  height: 100%;
+}
+.portfolio__carusel .slick-slide {
+  margin: 0 8px;
+}
+.portfolio__carusel .slick-list {
+  margin: 0 -8px;
+}
+.portfolio__carusel .slick-slide div {
+  height: calc(50% - 7.5px);
+}
+.portfolio__carusel .slick-slide div:first-child {
+  margin-bottom: 15px;
+}
+.portfolio__image {
+  display: block !important;
+  height: 100%;
+  border-radius: 5px 25px 5px 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .portfolio__image {
+    border-radius: 10px 36px 10px 10px;
+  }
+}
+.portfolio__controllers .carusel__btn {
   border: 1px solid #ea91a5;
 }
-.portfolio .carusel__buttonwrapper {
+.portfolio__controllers.carusel__buttonwrapper {
   order: 5;
 }
 @media (min-width: 1024px) {
-  .portfolio .carusel__buttonwrapper {
+  .portfolio__controllers.carusel__buttonwrapper {
     order: 6;
   }
 }
@@ -3312,10 +3338,4 @@ body {
   .portfolio .carusel__accentbtn_icon {
     order: 3;
   }
-}
-
-.before_after_image_slide {
-  display: block !important;
-  max-width: 900px;
-  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

@@ -331,28 +331,6 @@
         }
       }
     }
-
-    &__online {
-      margin-left: 17px;
-      width: 118px;
-      font-size: 10px;
-      font-weight: 700;
-      background-size: 100% auto;
-      text-transform: uppercase;
-
-      &:hover {
-        background-position: right center;
-        background-size: 200% auto;
-        -webkit-animation: pulse 2s infinite;
-        animation: pulse512 1.5s infinite;
-      }
-
-      @include _1024 {
-        margin-left: 10px;
-        width: 172px;
-        font-size: 14px;
-      }
-    }
   }
 }
 
@@ -585,4 +563,26 @@
   overflow: auto;
   bottom: 0;
   background-color: $semi-light-color;
+}
+
+.button__online {
+  margin-left: 17px;
+  width: 118px;
+  font-size: 10px;
+  font-weight: 700;
+  background-size: 100% auto;
+  text-transform: uppercase;
+
+  &:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+  }
+
+  @include _1024 {
+    margin-left: 10px;
+    width: 172px;
+    font-size: 14px;
+  }
 }

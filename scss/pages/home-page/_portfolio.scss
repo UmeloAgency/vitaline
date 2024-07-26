@@ -50,56 +50,47 @@
   }
   &__animation {
     flex-shrink: 0;
-    border-radius: 5px 25px 5px 5px;
     width: 100%;
     max-width: 584px;
     margin-left: auto;
     margin-right: auto;
 
     @include _1024 {
-      max-width: 528px;
-      max-height: 455px;
-      height: auto;
-      margin-right: 16px;
-      width: 47%;
-    }
-  }
-
-  &__image {
-    border-radius: 5px 25px 5px 5px;
-
-    @include _1024 {
-      border-radius: 10px 36px 10px 10px;
+      max-width: 544px;
+      max-height: 0;
+      height: 0;
+      margin: 0;
+      padding-right: 16px;
+      @include retinacontainer-width(calc(48%));
     }
 
-    &_wrapper {
-      background-color: transparent;
+    &_inner {
+      @include retinacontainer-height(87.2%);
+    }
+    &_content {
+      @include retinacontainer-content;
+    }
 
-      @include _1024 {
-        @include flex(space-between, stretch, column);
+    .slick-list,
+    .slick-track,
+    .slick-slide {
+      height: 100%;
+    }
+
+    .before_after_image_slide {
+      border-radius: 5px 25px 5px 5px;
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+
+      img {
+        height: 100% !important;
+        object-fit: cover;
       }
     }
   }
 
-  &__subcaruselwrapp {
-    @include retinacontainer-height(78.4%);
-    margin-bottom: 25px;
-
-    @include _1024 {
-      margin-bottom: 0;
-    }
-  }
-
-  .card {
-    &__wrapper {
-      @include retinacontainer-width(calc((100% - 8px) / 2));
-    }
-    &__inner {
-      @include retinacontainer-height(161%);
-    }
-  }
-
-  .carusel {
+  &__carusel {
     max-width: 584px;
     margin-top: 8px;
     margin-left: auto;
@@ -107,53 +98,92 @@
     @include retinacontainer-width(100%);
 
     @include _1024 {
-      margin-top: 0;
+      margin: 0;
+      @include retinacontainer-width(calc(52%));
+      max-width: 580px;
+    }
+
+    &wrapp {
+      @include retinacontainer-height(78.4%);
+      margin-bottom: 25px;
+
+      @include _1024 {
+        margin-bottom: 0;
+      }
     }
 
     &__wrapper {
-      width: 100%;
-      margin-right: -8px;
       @include retinacontainer-content;
     }
 
-    &__btn {
+    .slick-list,
+    .slick-track,
+    .slick-slide {
+      height: 100%;
+    }
+
+    .slick-slide {
+      margin: 0 8px;
+    }
+
+    .slick-list {
+      margin: 0 -8px;
+    }
+
+    .slick-slide div {
+      height: calc(50% - 7.5px);
+
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__image {
+    display: block !important;
+    height: 100%;
+    border-radius: 5px 25px 5px 5px;
+    object-fit: cover;
+
+    @include _1024 {
+      border-radius: 10px 36px 10px 10px;
+    }
+  }
+
+  &__controllers {
+    .carusel__btn {
       border: 1px solid $medium-color;
     }
-    &__buttonwrapper {
+    &.carusel__buttonwrapper {
       order: 5;
 
       @include _1024 {
         order: 6;
       }
     }
-    &__accentbtn {
-      overflow: hidden;
-      order: 2;
-      margin: 0;
+  }
 
+  .carusel__accentbtn {
+    overflow: hidden;
+    order: 2;
+    margin: 0;
+
+    @include _1024 {
+      order: 5;
+    }
+
+    &_text {
+      max-width: 70px;
+
+      @include _640 {
+        max-width: fit-content;
+      }
+    }
+
+    &_icon {
       @include _1024 {
-        order: 5;
-      }
-
-      &_text {
-        max-width: 70px;
-
-        @include _640 {
-          max-width: fit-content;
-        }
-      }
-
-      &_icon {
-        @include _1024 {
-          order: 3;
-        }
+        order: 3;
       }
     }
   }
-}
-
-.before_after_image_slide {
-  display: block !important;
-  max-width: 900px;
-  margin: 0 auto;
 }
