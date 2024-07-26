@@ -72,6 +72,7 @@
     padding-top: 7px;
     padding-right: 12px;
     padding-left: 12px;
+    text-wrap: nowrap;
 
     @include _1024-1100 {
       padding-left: 8px;
@@ -309,6 +310,10 @@
       @include flex(space-between);
       padding-top: 10px;
       padding-bottom: 10px;
+
+      @include _1024-1100 {
+        padding-left: 8px;
+      }
     }
 
     &__search {
@@ -320,11 +325,6 @@
       }
 
       svg {
-        width: 22px;
-        height: 22px;
-        stroke: $semi-medium-color;
-        fill: none;
-
         @include _1024 {
           width: 26px;
           height: 26px;
@@ -358,6 +358,10 @@
     @include _1024 {
       @include visible('flex');
     }
+
+    @include _1024-1100 {
+      margin-right: 8px;
+    }
   }
   &__button {
     padding-left: 2px;
@@ -382,6 +386,74 @@
     padding-left: 2px;
     padding-right: 2px;
     color: $semi-dark-color;
+  }
+}
+
+.input__search {
+  position: relative;
+  cursor: pointer;
+  height: 39px;
+  width: 100%;
+
+  @include _1024 {
+    height: 50px;
+    width: 50px;
+
+    &:hover .input__search_input {
+      width: 295px;
+      padding-left: 52px;
+    }
+  }
+
+  &_icon {
+    position: absolute;
+    width: 46px;
+    height: 39px;
+    border-radius: 100%;
+    background-color: $semi-medium-color;
+    @include flex;
+    @include сentering-y;
+    z-index: 2;
+
+    svg {
+      height: 22px;
+      width: 22px;
+      stroke: $semi-dark-color;
+      fill: none;
+    }
+
+    @include _1024 {
+      height: 48px;
+      width: 50px;
+    }
+  }
+  &_input {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    padding: 17px 19px;
+    background-color: $semi-medium-color;
+    border: none;
+    padding-left: 48px;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+    transition: all 0.2s linear;
+    @include font(12px, 400, $dark-color, 112%);
+
+    &:focus {
+      outline: 1px solid $medium-color;
+    }
+
+    &::placeholder {
+      transition: all 0.2s linear;
+      @include font(12px, 400, $medium-color, 112%);
+    }
+    @include _1024 {
+      position: absolute;
+      width: 50px;
+      padding-left: 0;
+    }
   }
 }
 
@@ -416,30 +488,7 @@
   }
 
   &__search {
-    position: relative;
     margin-bottom: 30px;
-    &_icon {
-      height: 22px;
-      width: 22px;
-      stroke: $semi-dark-color;
-      fill: none;
-      position: absolute;
-      left: 12px;
-      @include сentering-y;
-    }
-    &_input {
-      height: 39px;
-      width: 100%;
-      border-radius: 100px;
-      padding: 17px 19px;
-      background-color: $semi-medium-color;
-      border: none;
-      padding-left: 45px;
-
-      &::placeholder {
-        @include font(12px, 400, $medium-color, 112%);
-      }
-    }
   }
 
   &__nav {

@@ -469,8 +469,8 @@ body {
   .feedback__insta::before {
     content: "";
     position: absolute;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     background-color: #de6682;
     border-radius: 50px;
     z-index: -1;
@@ -904,6 +904,7 @@ body {
   padding-top: 7px;
   padding-right: 12px;
   padding-left: 12px;
+  text-wrap: nowrap;
 }
 @media (min-width: 1024px) and (max-width: 1100px) {
   .nav__link {
@@ -1080,6 +1081,11 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .nav .button__wrapper {
+    padding-left: 8px;
+  }
+}
 .nav .button__search {
   display: none;
   visibility: hidden;
@@ -1090,12 +1096,6 @@ body {
     display: flex;
     visibility: visible;
   }
-}
-.nav .button__search svg {
-  width: 22px;
-  height: 22px;
-  stroke: #f3d2e0;
-  fill: none;
 }
 @media (min-width: 1024px) {
   .nav .button__search svg {
@@ -1136,6 +1136,11 @@ body {
     visibility: visible;
   }
 }
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .language__wrapper {
+    margin-right: 8px;
+  }
+}
 .language__button {
   padding-left: 2px;
   padding-right: 2px;
@@ -1162,6 +1167,98 @@ body {
   padding-left: 2px;
   padding-right: 2px;
   color: #de6682;
+}
+
+.input__search {
+  position: relative;
+  cursor: pointer;
+  height: 39px;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .input__search {
+    height: 50px;
+    width: 50px;
+  }
+  .input__search:hover .input__search_input {
+    width: 295px;
+    padding-left: 52px;
+  }
+}
+.input__search_icon {
+  position: absolute;
+  width: 46px;
+  height: 39px;
+  border-radius: 100%;
+  background-color: #f3d2e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.input__search_icon svg {
+  height: 22px;
+  width: 22px;
+  stroke: #de6682;
+  fill: none;
+}
+@media (min-width: 1024px) {
+  .input__search_icon {
+    height: 48px;
+    width: 50px;
+  }
+}
+.input__search_input {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  padding: 17px 19px;
+  background-color: #f3d2e0;
+  border: none;
+  padding-left: 48px;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+  transition: all 0.2s linear;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 112%;
+  color: #c75671;
+}
+.input__search_input:focus {
+  outline: 1px solid #ea91a5;
+}
+.input__search_input::-moz-placeholder {
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 112%;
+  color: #ea91a5;
+}
+.input__search_input::placeholder {
+  transition: all 0.2s linear;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 112%;
+  color: #ea91a5;
+}
+@media (min-width: 1024px) {
+  .input__search_input {
+    position: absolute;
+    width: 50px;
+    padding-left: 0;
+  }
 }
 
 .navmobile {
@@ -1197,44 +1294,7 @@ body {
   transition: all 2s linear 0.3s;
 }
 .navmobile__search {
-  position: relative;
   margin-bottom: 30px;
-}
-.navmobile__search_icon {
-  height: 22px;
-  width: 22px;
-  stroke: #de6682;
-  fill: none;
-  position: absolute;
-  left: 12px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.navmobile__search_input {
-  height: 39px;
-  width: 100%;
-  border-radius: 100px;
-  padding: 17px 19px;
-  background-color: #f3d2e0;
-  border: none;
-  padding-left: 45px;
-}
-.navmobile__search_input::-moz-placeholder {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 112%;
-  color: #ea91a5;
-}
-.navmobile__search_input::placeholder {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 112%;
-  color: #ea91a5;
 }
 .navmobile__nav {
   margin-bottom: 30px;
