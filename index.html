@@ -404,64 +404,66 @@
             </a>
           </div>
 
-          <div class="banner__image">
-            <img src="./dev_copmonent/bg-mob.png" alt="" srcset="" />
-          </div>
+          <div class="baaner__carusel">
+            <div class="banner__image">
+              <img src="./dev_copmonent/bg-mob.png" alt="" srcset="" />
+            </div>
 
-          <div class="banner__textblock">
-            <h3 class="banner__title">
-              СПРОБУЙ вчасно чистка обличча
-              <span class="banner__title accent">знижка -20%</span>
-            </h3>
-            <p class="banner__subtitle">
-              Комбінована чистка обличчя — це поєднання декількох
-              косметологічних методів очищення
-            </p>
-            <p class="banner__price">
-              3450<span class="banner__price_currant">грн</span>
-              <span class="banner__price accent">3450</span
-              ><span class="banner__price_currant accent">грн</span>
-            </p>
-          </div>
+            <div class="banner__textblock">
+              <h3 class="banner__title">
+                СПРОБУЙ вчасно чистка обличча
+                <span class="banner__title accent">знижка -20%</span>
+              </h3>
+              <p class="banner__subtitle">
+                Комбінована чистка обличчя — це поєднання декількох
+                косметологічних методів очищення
+              </p>
+              <p class="banner__price">
+                3450<span class="banner__price_currant">грн</span>
+                <span class="banner__price accent">3450</span
+                ><span class="banner__price_currant accent">грн</span>
+              </p>
+            </div>
 
-          <div class="banner__buttonblock">
-            <button type="button" class="button-text banner__button register">
-              <span>Записатися на прийом</span>
-            </button>
-            <button type="button" class="button-text banner__button detail">
-              Детальніше
-              <span>
-                <svg class="banner__button_icon">
-                  <use href="./symbol-defs.svg#icon-arrow"></use>
-                </svg>
-              </span>
-            </button>
-          </div>
-
-          <div class="slider__controller">
-            <p class="slider__count">
-              <span class="slider__count_active">01</span>
-              /
-              <span class="slider__count_total">05</span>
-            </p>
-            <div class="slider__buttonblock">
-              <button type="button" class="slider__button left">
-                <svg class="slider__button_icon">
-                  <use href="./symbol-defs.svg#icon-arrow"></use>
-                </svg>
+            <div class="banner__buttonblock">
+              <button type="button" class="button-text banner__button register">
+                <span>Записатися на прийом</span>
               </button>
-              <button type="button" class="slider__button right">
-                <svg class="slider__button_icon">
-                  <use href="./symbol-defs.svg#icon-arrow"></use>
-                </svg>
+              <button type="button" class="button-text banner__button detail">
+                Детальніше
+                <span>
+                  <svg class="banner__button_icon">
+                    <use href="./symbol-defs.svg#icon-arrow"></use>
+                  </svg>
+                </span>
               </button>
             </div>
-            <div class="slider__dotblock">
-              <button type="button" class="slider__dot accent"></button>
-              <button type="button" class="slider__dot"></button>
-              <button type="button" class="slider__dot"></button>
-              <button type="button" class="slider__dot"></button>
-              <button type="button" class="slider__dot"></button>
+
+            <div class="slider__controller">
+              <p class="slider__count">
+                <span class="slider__count_active">01</span>
+                /
+                <span class="slider__count_total">05</span>
+              </p>
+              <div class="slider__buttonblock">
+                <button type="button" class="slider__button left">
+                  <svg class="slider__button_icon">
+                    <use href="./symbol-defs.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <button type="button" class="slider__button right">
+                  <svg class="slider__button_icon">
+                    <use href="./symbol-defs.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="slider__dotblock">
+                <button type="button" class="slider__dot accent"></button>
+                <button type="button" class="slider__dot"></button>
+                <button type="button" class="slider__dot"></button>
+                <button type="button" class="slider__dot"></button>
+                <button type="button" class="slider__dot"></button>
+              </div>
             </div>
           </div>
         </div>
@@ -1692,6 +1694,38 @@
     <!-- <script src="js/carusel.js"></script> -->
 
     <script type="text/javascript">
+      $('#slider-baner').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        variableWidth: true,
+        prevArrow: document.querySelector('#slider-right-doc'),
+        nextArrow: document.querySelector('#slider-right-doc'),
+        // responsive: [
+        //   {
+        //     breakpoint: 1024,
+        //     settings: {
+        //       slidesToShow: 4,
+        //       slidesToScroll: 2,
+        //     },
+        //   },
+        //   {
+        //     breakpoint: 600,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 1,
+        //     },
+        //   },
+        //   {
+        //     breakpoint: 480,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 1,
+        //     },
+        //   },
+        // ],
+      });
+
       $('#slider-doc').slick({
         infinite: true,
         slidesToShow: 4,
@@ -1721,9 +1755,6 @@
               slidesToScroll: 1,
             },
           },
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
         ],
       });
 

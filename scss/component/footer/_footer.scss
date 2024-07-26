@@ -68,11 +68,19 @@
         height: 25px;
         fill: $dark-color;
       }
+
+      &:hover svg {
+        fill: #0084c6;
+      }
     }
 
     .feedback__viber {
       @extend .feedback__telegramm;
       margin-left: 30px;
+
+      &:hover svg {
+        fill: #7360f2;
+      }
     }
   }
 

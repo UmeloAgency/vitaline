@@ -1475,8 +1475,14 @@ body {
   height: 25px;
   fill: #c75671;
 }
+.footer__social .feedback__telegramm:hover svg, .footer__social .feedback__viber:hover svg {
+  fill: #0084c6;
+}
 .footer__social .feedback__viber {
   margin-left: 30px;
+}
+.footer__social .feedback__viber:hover svg {
+  fill: #7360f2;
 }
 .footer__button {
   display: none;
@@ -3275,15 +3281,15 @@ body {
   bottom: 0;
   left: 0;
 }
-.portfolio__carusel .slick-list,
-.portfolio__carusel .slick-track,
-.portfolio__carusel .slick-slide {
+.portfolio__carusel .slick-list {
+  margin: 0 -8px;
+  height: 100%;
+}
+.portfolio__carusel .slick-track {
   height: 100%;
 }
 .portfolio__carusel .slick-slide {
-  margin: 0 8px;
-}
-.portfolio__carusel .slick-list {
+  height: 100%;
   margin: 0 -8px;
 }
 .portfolio__carusel .slick-slide div {

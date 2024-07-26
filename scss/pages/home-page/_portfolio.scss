@@ -116,25 +116,26 @@
       @include retinacontainer-content;
     }
 
-    .slick-list,
-    .slick-track,
-    .slick-slide {
-      height: 100%;
-    }
+    .slick {
+      &-list {
+        margin: 0 -8px;
+        height: 100%;
+      }
 
-    .slick-slide {
-      margin: 0 8px;
-    }
+      &-track {
+        height: 100%;
+      }
+      &-slide {
+        height: 100%;
+        margin: 0 -8px;
 
-    .slick-list {
-      margin: 0 -8px;
-    }
+        div {
+          height: calc(50% - 7.5px);
 
-    .slick-slide div {
-      height: calc(50% - 7.5px);
-
-      &:first-child {
-        margin-bottom: 15px;
+          &:first-child {
+            margin-bottom: 15px;
+          }
+        }
       }
     }
   }
