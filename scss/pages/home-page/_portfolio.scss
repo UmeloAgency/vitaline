@@ -83,6 +83,10 @@
       position: relative;
       height: 100%;
 
+      @include _1024 {
+        border-radius: 10px, 36px, 10px, 10px;
+      }
+
       img {
         height: 100% !important;
         object-fit: cover;

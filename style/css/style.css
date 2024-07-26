@@ -2007,6 +2007,12 @@ body {
 @media (min-width: 1024px) {
   .banner__staticblock {
     width: 429px;
+    bottom: 20px;
+  }
+}
+@media (min-width: 1248px) {
+  .banner__staticblock {
+    bottom: 27px;
   }
 }
 .banner__carusel {
@@ -2122,6 +2128,7 @@ body {
     padding-bottom: 145px;
     width: 429px;
     max-width: 429px;
+    align-items: flex-start;
   }
 }
 @media (min-width: 1248px) {
@@ -2256,7 +2263,7 @@ body {
 @media (min-width: 1024px) {
   .banner__buttonblock {
     order: 1;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     max-width: 100%;
     width: 465px;
     justify-content: flex-start;
@@ -2448,11 +2455,10 @@ body {
 .banner .feedback__viber {
   margin-top: 32px;
   margin-bottom: 25px;
-  transform: rotate(270deg);
   transition: transform 0.2s;
 }
 .banner .feedback__viber:hover {
-  transform: translateX(0.25rem);
+  transform: translatey(-0.25rem);
 }
 .banner .feedback__viber:hover svg {
   fill: #ffffff;
@@ -2462,21 +2468,14 @@ body {
     margin-top: 37px;
   }
 }
-.banner .feedback__viber svg {
-  transform: rotate(90deg);
-}
 .banner .feedback__telegramm, .banner .footer__social .feedback__viber, .footer__social .banner .feedback__viber {
   transition: transform 0.2s;
-  transform: rotate(270deg);
 }
 .banner .feedback__telegramm:hover, .banner .footer__social .feedback__viber:hover, .footer__social .banner .feedback__viber:hover {
-  transform: translateX(0.25rem);
+  transform: translateY(-0.25rem);
 }
 .banner .feedback__telegramm:hover svg, .banner .footer__social .feedback__viber:hover svg, .footer__social .banner .feedback__viber:hover svg {
   fill: #ffffff;
-}
-.banner .feedback__telegramm svg, .banner .footer__social .feedback__viber svg, .footer__social .banner .feedback__viber svg {
-  transform: rotate(90deg);
 }
 .banner .slick-track, .banner .slick-slide, .banner .slick-list {
   height: 100%;
@@ -3358,6 +3357,11 @@ body {
   overflow: hidden;
   position: relative;
   height: 100%;
+}
+@media (min-width: 1024px) {
+  .portfolio__animation .before_after_image_slide {
+    border-radius: 10px, 36px, 10px, 10px;
+  }
 }
 .portfolio__animation .before_after_image_slide img {
   height: 100% !important;
